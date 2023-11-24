@@ -19,14 +19,12 @@ function App() {
         <section className="sidebar">
           <Sidebar />
         </section>
-        <section>
-          <Router className="main">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/mypage" element={<MyPage />} />
-            </Routes>
-          </Router>
-        </section>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mypage" element={<MyPage />} />
+          </Routes>
+        </Router>
       </div>
     </div>
   );

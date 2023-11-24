@@ -1,30 +1,17 @@
-/* .sidebar {
-  width: 50%;
+.App {
+  padding: 35px;
 }
 
 .divisionScreen {
-  width: 50%;
-  display: flex;
-  flex: 1;
-  padding-right: 0px;
-  align-items: center;
-} */
-
-/* App.css */
-
-.divisionScreen {
-  flex-direction: row;
   display: flex;
   height: 100vh;
   flex: 1;
 }
 
-.sidebar {
-  width: 30%;
-  background-color: #f0f0f0; /* 예시로 배경색 추가 */
-}
-
-.main {
-  display: flex;
-  flex-direction: column; /* 내부 컴포넌트들을 세로로 배치하기 위해 추가 */
+/* 중간 선 css 처리 */
+.line {
+  margin: 7%;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border-top: 5px solid #5e8f6c;
 }

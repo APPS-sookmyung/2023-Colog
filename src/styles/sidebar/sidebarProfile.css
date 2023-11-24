@@ -1,0 +1,55 @@
+.SidebarProfile {
+  margin-top: 35px;
+
+  /* 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 크기 */
+  width: 442px;
+  height: 473px;
+
+  /* 해당 아이템이 축소되지 않도록 지정 */
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #c4cec7;
+
+  /* 폰트 조정 */
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile {
+  width: 401px;
+  height: 407px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border-top: 25px solid #5e8f6c;
+  position: relative;
+  background: #fff;
+}
+
+.profileImg {
+  width: 198px;
+  height: 198px;
+  flex-shrink: 0;
+  padding-top: 3%;
+}
+
+.topBackground {
+  /* 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 380px;
+  height: 11px;
+  margin-top: 8px;
+  margin-left: 2%;
+
+  flex-shrink: 0;
+  background-color: #5e8f6c;
+  position: absolute;
+  top: -25px; /* 이미지를 상위로 25px 이동하여 border-top과 겹치게 함 */
+}
