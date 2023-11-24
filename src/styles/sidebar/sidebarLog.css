@@ -1,4 +1,5 @@
 .SidebarLog {
+  display: flex;
   margin-top: 35px;
 
   /* 크기 */
@@ -16,23 +17,6 @@
   text-align: center;
   font-weight: bold;
 }
-
-/* .topBackground { */
-/* 가운데 정렬 */
-/* display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 380px;
-  height: 11px;
-  margin-top: 8px;
-  margin-left: 2%;
-
-  flex-shrink: 0;
-  background-color: #5e8f6c;
-  position: absolute;
-  top: -25px;
-} */
 
 .sidebarLogStudy {
   /* 위치 조정 */
@@ -71,4 +55,20 @@
   /* background-color: #5e8f6c; */
   position: absolute;
   top: -25px; /* 이미지를 상위로 25px 이동하여 border-top과 겹치게 함 */
+}
+
+/* TODO */
+
+.sidebarLogTodo {
+  /* 위치 조정 */
+  top: 21px;
+  left: 42px;
+
+  width: 191px;
+  height: 186px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border-top: 25px solid #5e8f6c;
+  position: relative;
+  background: #fff;
 }

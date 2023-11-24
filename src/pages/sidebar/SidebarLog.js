@@ -10,24 +10,54 @@ import topEclipse from "../../assets/background/top_eclipse.png";
 const SidebarLog = () => {
   return (
     <div className="SidebarLog">
-      <div className="sidebarLogStudy">
-        <img src={topEclipse} className="topEclipse" />
-        <a href="/mypage" style={{ color: "black", textDecoration: "none" }}>
-          <div className="SidebarLogStudyTitle">STUDY</div>
-          <div className="SliderLogLine">
-            <img src={line} />
-          </div>
-          <br />
-          <div className="logContent">
-            <div style={{ color: "gray" }}>
-              - Day 10
-              <br />- 23 H 36 M
-            </div>
-          </div>
-        </a>
-      </div>
+      <Study />
+      <ToDo />
     </div>
   );
 };
 
 export default SidebarLog;
+
+// 스터디
+const Study = () => {
+  return (
+    <div className="sidebarLogStudy">
+      <img src={topEclipse} className="topEclipse" />
+      <a href="/mypage" style={{ color: "black", textDecoration: "none" }}>
+        <div className="SidebarLogStudyTitle">STUDY</div>
+        <div className="SliderLogLine">
+          <img src={line} />
+        </div>
+        <br />
+        <div className="logContent">
+          <div style={{ color: "gray" }}>
+            - Day 10
+            <br />- 23 H 36 M
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+};
+
+// ToDo
+const ToDo = () => {
+  return (
+    <div className="sidebarLogTodo">
+      <img src={topEclipse} className="topEclipse" />
+      <a href="/mypage" style={{ color: "black", textDecoration: "none" }}>
+        <div className="SidebarLogStudyTitle">TODO</div>
+        <div className="SliderLogLine">
+          <img src={line} />
+        </div>
+        <br />
+        <div className="logContent">
+          <div style={{ color: "gray" }}>
+            - Goal : 3H 00 M
+            <br />- D-10
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+};
