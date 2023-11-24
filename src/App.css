@@ -7,11 +7,3 @@
   height: 100vh;
   flex: 1;
 }
-
-/* 중간 선 css 처리 */
-.line {
-  margin: 7%;
-  flex-shrink: 0;
-  border-radius: 6px;
-  border-top: 5px solid #5e8f6c;
-}

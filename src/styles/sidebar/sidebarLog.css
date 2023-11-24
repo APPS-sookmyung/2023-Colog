@@ -1,0 +1,74 @@
+.SidebarLog {
+  margin-top: 35px;
+
+  /* 크기 */
+  width: 442px;
+  height: 473px;
+
+  /* 해당 아이템이 축소되지 않도록 지정 */
+  flex-shrink: 0;
+
+  /* 배경 */
+  border-radius: 10px;
+  background: #c4cec7;
+
+  /* 폰트 조정 */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* .topBackground { */
+/* 가운데 정렬 */
+/* display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 380px;
+  height: 11px;
+  margin-top: 8px;
+  margin-left: 2%;
+
+  flex-shrink: 0;
+  background-color: #5e8f6c;
+  position: absolute;
+  top: -25px;
+} */
+
+.sidebarLogStudy {
+  /* 위치 조정 */
+  top: 21px;
+  left: 21px;
+
+  width: 191px;
+  height: 186px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border-top: 25px solid #5e8f6c;
+  position: relative;
+  background: #fff;
+}
+
+.SidebarLogStudyTitle {
+  font-size: 30px;
+  font-weight: 100px;
+
+  /* 위치 조정 */
+  padding: 7%;
+}
+
+.topEclipse {
+  /* 가운데 정렬 */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+
+  width: 23px;
+  /* height: 11px; */
+  margin-top: 7px;
+  margin-left: 5%;
+
+  flex-shrink: 0;
+  /* background-color: #5e8f6c; */
+  position: absolute;
+  top: -25px; /* 이미지를 상위로 25px 이동하여 border-top과 겹치게 함 */
+}

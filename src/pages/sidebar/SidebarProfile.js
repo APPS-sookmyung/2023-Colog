@@ -17,8 +17,8 @@ const SidebarProfile = () => {
           />
           <img src={profileImg} alt="profileImg" className="profileImg" />
         </a>
-        <div className="textCenter">Ajeong Joo</div>
-        <div className="line"></div>
+        <div>Ajeong Joo</div>
+        <div className="sliderProfileLine"></div>
         <div>집 가고 싶어요... </div>
         <br />
         <div>
