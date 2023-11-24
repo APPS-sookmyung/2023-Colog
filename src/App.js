@@ -7,21 +7,28 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import MyPage from "./pages/myPage/MyPage.js";
 import Header from "./components/Header.js";
+import Sidebar from "./pages/sidebar/Sidebar.js";
 
 function App() {
   return (
-    <Router>
+    <div className="App">
       <header>
         <Header />
       </header>
-      <div className="App">
-        {/* <Sidebar /> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/mypage" element={<MyPage />} />
-        </Routes>
+      <div className="divisionScreen">
+        <section className="sidebar">
+          <Sidebar />
+        </section>
+        <section>
+          <Router className="main">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/mypage" element={<MyPage />} />
+            </Routes>
+          </Router>
+        </section>
       </div>
-    </Router>
+    </div>
   );
 }
 
