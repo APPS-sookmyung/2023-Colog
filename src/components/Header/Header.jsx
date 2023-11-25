@@ -1,19 +1,30 @@
-import logo from "../assets/img/Logo.png";
-import navIcon from "../assets/icon/navIcon.png";
-import "../styles/components/header.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import * as S from "./Header.style";
 
 const Header = () => {
+  const [showNavItems, setShowNavItems] = useState(false);
+
+  const handleNavClick = () => {
+    setShowNavItems(!showNavItems);
+  };
+
   return (
-    <div className="Header">
-      <div>
-        <a href="/">
-          <img src={logo} alt="Colog Icon" />
-        </a>
-      </div>
-      <div>
-        <img src={navIcon} alt="Colog Icon" />
-      </div>
-    </div>
+    <S.Header>
+      <S.Logo href="/">Colog</S.Logo>
+      <S.Nav>
+        <S.NavBox onClick={handleNavClick}>
+          <span>Menu</span>
+          {showNavItems && (
+            <div>
+              <a href="/">Home</a>
+              <a href="/calendar">Calendar</a>
+              <a href="/mypage">MyPage</a>
+            </div>
+          )}
+        </S.NavBox>
+      </S.Nav>
+    </S.Header>
   );
 };
 
