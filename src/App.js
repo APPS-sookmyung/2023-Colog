@@ -1,33 +1,16 @@
-// 기능 import
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// 파일 import
 import "./App.css";
-import Home from "./pages/home/Home";
-import MyPage from "./pages/myPage/MyPage.js";
-import Header from "./components/Header.js";
-import Sidebar from "./pages/sidebar/Sidebar.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header>
-        <Header />
-      </header>
-      <div className="divisionScreen">
-        <section className="sidebar">
-          <Sidebar />
-        </section>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/mypage" element={<MyPage />} />
-          </Routes>
-        </Router>
-      </div>
-    </div>
+    <div></div>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/mypage" element={<MyPage />} />
+    //   </Routes>
+    // </BrowserRouter>
   );
-}
+};
 
 export default App;
