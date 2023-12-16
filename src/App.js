@@ -1,22 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Timer from "./components/Timer/Timer";
-import CountDown from "./components/CountDown/CountDown";
+import TimerPage from "./pages/Home/TimerPage/TimerPage";
 
 const App = () => {
   return (
     <div>
-      {/* <Header /> */}
-      {/* <Timer /> */}
-      <CountDown initialHours={0} initialMinutes={0} initialSeconds={3} />
+      <TimerPage />
     </div>
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/mypage" element={<MyPage />} />
-    //   </Routes>
-    // </BrowserRouter>
   );
 };
 
