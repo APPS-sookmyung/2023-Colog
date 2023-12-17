@@ -1,9 +1,15 @@
-.App {
-  padding: 35px;
+/* .App {
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .divisionScreen {
   display: flex;
   height: 100vh;
   flex: 1;
-}
+} */
