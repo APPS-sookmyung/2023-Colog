@@ -25,6 +25,8 @@ const InitialHome = () => {
         <S.thridContainer>
           <S.thirdDescription1>
             프로그래머만의 뿌듯함을 느끼고 싶으신가요?
+            <br />
+            <br />
           </S.thirdDescription1>
           <S.thirdDescription2>
             나만의 코딩 기록 서비스, 코록은 타이머, 뽀모도로 등

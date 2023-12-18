@@ -35,11 +35,8 @@ export const secondThridContainer = styled.div`
   background-size: cover;
   width: 100%;
   height: 2160px;
-  align-items: center;
   box-shadow: inset -200px 0 0 0 #6e6f70, inset 200px 0 0 0 #6e6f70;
-
-  // display: flex;
-  margin: 0 auto;
+  text-align: center;
 `;
 // secondContainer
 export const secondContainer = styled.div`
@@ -56,15 +53,26 @@ export const secondDescription2 = styled.div`
 
 // thridContainer
 export const thridContainer = styled.div`
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
   width: 100%;
   height: 50%;
   flex-shrink: 0;
 `;
-export const thirdDescription1 = styled.div``;
-export const thirdDescription2 = styled.div``;
+export const thirdDescription1 = styled.div`
+  color: white;
+  font-size: 30px;
+`;
+export const thirdDescription2 = styled.div`
+  color: white;
+  font-size: 30px;
+`;
 
 // fourthContainer
-export const fourthContainer = styled.div``;
+export const fourthContainer = styled.div`
+  height: 1080px;
+  text-align: center;
+`;
 export const startButton = styled.button``;
-export const copyRightText = styled.div``;
+export const copyRightText = styled.div`
+  text-align: right;
+`;
