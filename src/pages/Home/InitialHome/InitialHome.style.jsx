@@ -41,6 +41,10 @@ export const secondThridContainer = styled.div`
 // secondContainer
 export const secondContainer = styled.div`
   height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const secondDescription1 = styled.div`
   color: white;
@@ -56,7 +60,10 @@ export const thridContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.25);
   width: 100%;
   height: 50%;
-  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const thirdDescription1 = styled.div`
   color: white;
@@ -71,8 +78,15 @@ export const thirdDescription2 = styled.div`
 export const fourthContainer = styled.div`
   height: 1080px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
-export const startButton = styled.button``;
+export const startButton = styled.button`
+  font-size: 100px;
+`;
 export const copyRightText = styled.div`
   text-align: right;
 `;
