@@ -1,6 +1,8 @@
 // InitialHome.style.jsx
 import styled from "@emotion/styled";
 
+import BackgroundImage from "../../../assets/img/Colog.background.png";
+
 export const InitialHome = styled.div``;
 
 // firstContainer
@@ -28,13 +30,37 @@ export const LogoText = styled.div`
 export const firstDescriptionText = styled.div``;
 
 // secondContainer
-export const secondContainer = styled.div``;
-export const BackgroundImage = styled.img``;
-export const secondDescription1 = styled.div``;
-export const secondDescription2 = styled.div``;
+export const secondThridContainer = styled.div`
+  background-image: url("${BackgroundImage}");
+  background-size: cover;
+  width: 100%;
+  height: 2160px;
+  align-items: center;
+  box-shadow: inset -200px 0 0 0 #6e6f70, inset 200px 0 0 0 #6e6f70;
+
+  // display: flex;
+  margin: 0 auto;
+`;
+// secondContainer
+export const secondContainer = styled.div`
+  height: 50%;
+`;
+export const secondDescription1 = styled.div`
+  color: white;
+  font-size: 20px;
+`;
+export const secondDescription2 = styled.div`
+  color: white;
+  font-size: 50px;
+`;
 
 // thridContainer
-export const thridContainer = styled.div``;
+export const thridContainer = styled.div`
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 50%;
+  flex-shrink: 0;
+`;
 export const thirdDescription1 = styled.div``;
 export const thirdDescription2 = styled.div``;
 
