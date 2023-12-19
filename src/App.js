@@ -5,13 +5,15 @@ import Timer from "./components/Timer/Timer";
 import CountDown from "./components/CountDown/CountDown";
 import Sidebar from "./components/Sidebar/Sidebar";
 import TimerPage from "./pages/TimerPage/TimerPage";
+import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";
 
 const App = () => {
   return (
     <div>
       {/* <Header /> */}
       {/* <InitialHome /> */}
-      <TimerPage />
+      {/* <TimerPage /> */}
+      <PomodoroPage />
       {/* <CountDown initialHours={0} initialMinutes={0} initialSeconds={3} /> */}
       {/* <Sidebar /> */}
     </div>
