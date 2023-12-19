@@ -6,6 +6,8 @@ import CountDown from "./components/CountDown/CountDown";
 import Sidebar from "./components/Sidebar/Sidebar";
 import TimerPage from "./pages/TimerPage/TimerPage";
 import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";
+import ToDoListPage from "./pages/ToDoListPage";
+import ToDoList from "./components/ToDoList/ToDoList";
 
 const App = () => {
   return (
@@ -13,7 +15,9 @@ const App = () => {
       {/* <Header /> */}
       {/* <InitialHome /> */}
       {/* <TimerPage /> */}
-      <PomodoroPage />
+      {/* <PomodoroPage /> */}
+      {/* <ToDoListPage /> */}
+      <ToDoList />
       {/* <CountDown initialHours={0} initialMinutes={0} initialSeconds={3} /> */}
       {/* <Sidebar /> */}
     </div>
