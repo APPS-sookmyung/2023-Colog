@@ -83,16 +83,16 @@ const CountDown = ({
 
   return (
     <S.CountDown>
-      <S.RestTime>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
-        currentMinutes < 10 ? "0" : ""
-      }${currentMinutes}m ${
-        currentSeconds < 10 ? "0" : ""
-      }${currentSeconds}s`}</S.RestTime>
       <S.SelectTimerButtons>
         <S.SelectTimerButton onClick={start}>START</S.SelectTimerButton>
         <S.SelectTimerButton onClick={stop}>STOP</S.SelectTimerButton>
         <S.SelectTimerButton onClick={reset}>RESET</S.SelectTimerButton>
       </S.SelectTimerButtons>
+      <S.RestTime>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
+        currentMinutes < 10 ? "0" : ""
+      }${currentMinutes}m ${
+        currentSeconds < 10 ? "0" : ""
+      }${currentSeconds}s`}</S.RestTime>
     </S.CountDown>
   );
 };
