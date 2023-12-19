@@ -1,10 +1,5 @@
 import styled from "@emotion/styled";
 
-const hover = `&:hover {
-  color: lightgray;
-  cursor: pointer;
-}`;
-
 export const ToDoList = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,5 +16,8 @@ export const ToDoListContent = styled.div`
   font-size: 20px;
 `;
 export const ToDoListItem = styled.div`
-  ${hover}
+  &:hover {
+    color: lightgray;
+    cursor: pointer;
+  }
 `;
