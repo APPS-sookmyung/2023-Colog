@@ -1,23 +1,16 @@
 import "./App.css";
+import Header from "./components/Header/Header";
+import InitialHome from "./pages/Home/InitialHome/InitialHome";
+import TimerPage from "./pages/Home/TimerPage/TimerPage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <TimerPage /> */}
+      {/* <InitialHome /> */}
+      <Header />
     </div>
   );
-}
+};
 
 export default App;
