@@ -1,14 +1,29 @@
+// Header.jsx
+import React from "react";
 import * as S from "./Header.style";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <S.Header>
-      <S.Home>Home</S.Home>
-      <S.Timer>Timer</S.Timer>
-      <S.Pomodoro>Pomodoro</S.Pomodoro>
-      <S.ToDoList>ToDoList</S.ToDoList>
-      <S.Calendar>Calendar</S.Calendar>
-      <S.MyPage>MyPage</S.MyPage>
+      <Link to="/" className="nav-link">
+        Home
+      </Link>
+      <Link to="/Timer" className="nav-link">
+        Timer
+      </Link>
+      <Link to="/Pomodoro" className="nav-link">
+        Pomodoro
+      </Link>
+      <Link to="/ToDoList" className="nav-link">
+        ToDoList
+      </Link>
+      <Link to="/Calendar" className="nav-link">
+        Calendar
+      </Link>
+      <Link to="/MyPage" className="nav-link">
+        MyPage
+      </Link>
     </S.Header>
   );
 };
