@@ -8,7 +8,6 @@ const InitialHome = () => {
   return (
     <S.InitialHome>
       <S.firstContainer>
-        <S.SidebarButton>사이드바버튼사진넣을예정</S.SidebarButton>
         <S.Logo>
           <S.LogoImage src={LogoImage} alt="logo" />
           <S.LogoText>Colog</S.LogoText>

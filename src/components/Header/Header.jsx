@@ -1,28 +1,14 @@
-import React, { useState } from "react";
 import * as S from "./Header.style";
 
 const Header = () => {
-  const [showNavItems, setShowNavItems] = useState(false);
-
-  const handleNavClick = () => {
-    setShowNavItems(!showNavItems);
-  };
-
   return (
     <S.Header>
-      <S.Logo href="/">Colog</S.Logo>
-      <S.Nav>
-        <S.NavBox onClick={handleNavClick}>
-          <span>Menu</span>
-          {showNavItems && (
-            <div>
-              <a href="/">Home</a>
-              <a href="/calendar">Calendar</a>
-              <a href="/mypage">MyPage</a>
-            </div>
-          )}
-        </S.NavBox>
-      </S.Nav>
+      <S.Home>Home</S.Home>
+      <S.Timer>Timer</S.Timer>
+      <S.Pomodoro>Pomodoro</S.Pomodoro>
+      <S.ToDoList>ToDoList</S.ToDoList>
+      <S.Calendar>Calendar</S.Calendar>
+      <S.MyPage>MyPage</S.MyPage>
     </S.Header>
   );
 };

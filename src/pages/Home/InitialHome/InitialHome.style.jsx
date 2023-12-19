@@ -7,10 +7,6 @@ export const InitialHome = styled.div``;
 
 // firstContainer
 export const firstContainer = styled.div``;
-export const SidebarButton = styled.button`
-  display: flex;
-  margin-left: auto;
-`;
 export const Logo = styled.div`
   display: flex;
   margin-left: 30%;
