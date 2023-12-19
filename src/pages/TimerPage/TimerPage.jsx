@@ -5,7 +5,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Timer from "../../components/Timer/Timer";
 import * as S from "./TimerPage.style";
 
-const TimerPage = (props) => {
+const TimerPage = () => {
   const [time, setTime] = useState(0);
   let targetTimeHour = 5;
   let targetTimeMinute = 5;
@@ -16,9 +16,9 @@ const TimerPage = (props) => {
   };
 
   // 목표까지 남은 시간 계산
-  const remainingHours = Math.floor(time / 3600);
-  const remainingMinutes = Math.floor((time % 3600) / 60);
-  const remainingSeconds = time % 60;
+  let remainingHours = targetTimeHour - Math.floor(time / 3600);
+  let remainingMinutes = targetTimeMinute - Math.floor((time % 3600) / 60);
+  let remainingSeconds = targetTimeSecond - (time % 60);
 
   return (
     <S.TimerPage>
@@ -27,9 +27,9 @@ const TimerPage = (props) => {
         <Sidebar />
         <S.NonSidebar>
           <Timer getTime={getTime} />
-          <S.remainingTime>
+          {/* <S.remainingTime>
             목표까지 {remainingHours}h {remainingMinutes}m {remainingSeconds}s
-          </S.remainingTime>
+          </S.remainingTime> */}
           <S.Explanation>
             <S.TargetTime>
               오늘의 목표 시간은 {targetTimeHour}h {targetTimeMinute}m{" "}
