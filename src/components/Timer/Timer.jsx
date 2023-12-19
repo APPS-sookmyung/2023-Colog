@@ -30,13 +30,17 @@ const useTimer = (initialValue, ms) => {
   return { count, start, stop, reset };
 };
 
-const Timer = () => {
+const Timer = (props) => {
   // 타이머 기능
   const [currentHours, setCurrentHours] = useState(0);
   const [currentMinutes, setCurrentMinutes] = useState(0);
   const [currentSeconds, setCurrentSeconds] = useState(0);
 
   const { count, start, stop, reset } = useTimer(0, 1000);
+
+  const setTime = () => {
+    props.getTime(count);
+  };
 
   useEffect(() => {
     const checkMinutes = Math.floor(count / 60);
@@ -51,6 +55,12 @@ const Timer = () => {
 
   return (
     <S.Timer>
+      <S.SelectTimerButtons onClick={setTime}>
+        {setTime()}
+        <S.SelectTimerButton onClick={start}>START</S.SelectTimerButton>
+        <S.SelectTimerButton onClick={stop}>STOP</S.SelectTimerButton>
+        <S.SelectTimerButton onClick={reset}>RESET</S.SelectTimerButton>
+      </S.SelectTimerButtons>
       <S.CountTime>
         {`${currentHours < 10 ? "0" : ""}${currentHours}h ${
           currentMinutes < 10 ? "0" : ""
@@ -58,11 +68,6 @@ const Timer = () => {
           currentSeconds < 10 ? "0" : ""
         }${currentSeconds}s`}
       </S.CountTime>
-      <S.SelectTimerButtons>
-        <S.SelectTimerButton onClick={start}>START</S.SelectTimerButton>
-        <S.SelectTimerButton onClick={stop}>STOP</S.SelectTimerButton>
-        <S.SelectTimerButton onClick={reset}>RESET</S.SelectTimerButton>
-      </S.SelectTimerButtons>
     </S.Timer>
   );
 };
