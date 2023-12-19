@@ -17,8 +17,8 @@ const App = () => {
       {/* <InitialHome /> */}
       {/* <TimerPage /> */}
       {/* <PomodoroPage /> */}
-      {/* <ToDoListPage /> */}
-      <TotalStudyTime />
+      <ToDoListPage />
+      {/* <TotalStudyTime /> */}
       {/* <ToDoList /> */}
       {/* <CountDown initialHours={0} initialMinutes={0} initialSeconds={3} /> */}
       {/* <Sidebar /> */}

@@ -11,14 +11,14 @@ export const TotalStudyTape = styled.div`
   background-color: #2b2d42;
   width: 30px;
   height: 50px;
-  margin-bottom: -3.5%;
+  margin-bottom: -13%;
 `;
 export const TotalStudyPostIt = styled.div`
-  margin: 30px;
+  // margin: 30px;
   font-size: 18px;
   border: 5px solid #2b2d42;
   border-radius: 5%;
-  padding: 40px;
+  padding: 30px;
   color: gray;
 `;
 export const TotalStudyContent1 = styled.div`

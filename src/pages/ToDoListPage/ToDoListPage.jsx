@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ToDoList from "../../components/ToDoList/ToDoList";
+import TotalStudy from "../../components/TotalStudy/TotalStudy";
 
 import * as S from "./ToDoListPage.style";
 
@@ -13,8 +14,12 @@ const ToDoListPage = () => {
       <S.Content>
         <Sidebar />
         <S.NonSidebar>
-          <ToDoList />
-          {/* TotalStudyTime 기능 */}
+          <S.ToDoList>
+            <ToDoList />
+          </S.ToDoList>
+          <S.TotalStudy>
+            <TotalStudy />
+          </S.TotalStudy>
         </S.NonSidebar>
       </S.Content>
     </S.ToDoListPage>
