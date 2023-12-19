@@ -9,19 +9,19 @@ const Header = () => {
       <Link to="/" className="nav-link">
         Home
       </Link>
-      <Link to="/Timer" className="nav-link">
+      <Link to="/timer" className="nav-link">
         Timer
       </Link>
-      <Link to="/Pomodoro" className="nav-link">
+      <Link to="/pomodoro" className="nav-link">
         Pomodoro
       </Link>
-      <Link to="/ToDoList" className="nav-link">
+      <Link to="/todolist" className="nav-link">
         ToDoList
       </Link>
-      <Link to="/Calendar" className="nav-link">
+      <Link to="/calendar" className="nav-link">
         Calendar
       </Link>
-      <Link to="/MyPage" className="nav-link">
+      <Link to="/mypage" className="nav-link">
         MyPage
       </Link>
     </S.Header>

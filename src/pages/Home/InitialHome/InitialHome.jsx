@@ -4,8 +4,15 @@ import * as S from "./InitialHome.style";
 import LogoImage from "../../../assets/img/Logo.png";
 import BackgroundImage from "../../../assets/img/Colog.background.png";
 import Header from "../../../components/Header/Header";
+import Timer from "../../../components/Timer/Timer";
+import { Link, useNavigate } from "react-router-dom";
 
 const InitialHome = () => {
+  const navigate = useNavigate();
+
+  const MoveTimerPage = () => {
+    navigate("/timer");
+  };
   return (
     <S.InitialHome>
       <Header />
@@ -41,7 +48,7 @@ const InitialHome = () => {
         </S.thridContainer>
       </S.secondThridContainer>
       <S.fourthContainer>
-        <S.startButton>START !</S.startButton>
+        <S.startButton onClick={MoveTimerPage}>START !</S.startButton>
         <S.copyRightText>Copyrightⓒ2023 Ajeong</S.copyRightText>
       </S.fourthContainer>
     </S.InitialHome>
