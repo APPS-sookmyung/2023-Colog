@@ -6,6 +6,7 @@ import TimerPage from "./pages/TimerPage/TimerPage";
 import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";
 import ToDoListPage from "./pages/ToDoListPage";
 import TotalStudyTime from "./components/TotalStudy/TotalStudy";
+import CalendarPage from "./pages/CalendarPage/CalendarPage";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
           <Route path="/timer" element={<TimerPage />} />
           <Route path="/pomodoro" element={<PomodoroPage />} />
           <Route path="/todolist" element={<ToDoListPage />} />
-          <Route path="/totalstudytime" element={<TotalStudyTime />} />
+          <Route path="/calendar" element={<CalendarPage />} />
         </Routes>
       </div>
     </Router>
