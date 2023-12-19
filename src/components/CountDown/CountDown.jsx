@@ -68,7 +68,7 @@ const CountDown = ({
   const { count, start, stop, reset } = useTimer(
     initialHours * 3600 + initialMinutes * 60 + initialSeconds,
     1000,
-    () => alert("카운트다운이 완료되었습니다.")
+    () => alert("공부 시간을 달성했어요!")
   );
 
   useEffect(() => {

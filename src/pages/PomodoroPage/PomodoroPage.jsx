@@ -6,10 +6,7 @@ import CountDown from "../../components/CountDown/CountDown";
 import * as S from "./PomodoroPage.style";
 
 const PomodoroPage = () => {
-  let targetTimeMinute = 5;
-  let relaxTimeMinute = 5;
-
-  // let targetTimeSecond = 5;
+  let targetTimeMinute = 1;
   return (
     <S.PomodoroPage>
       <Header />
@@ -22,9 +19,7 @@ const PomodoroPage = () => {
             initialSeconds={0}
           />
           <S.Explanation>
-            <S.TargetTime>
-              {targetTimeMinute}분 공부 {relaxTimeMinute} 분 휴식 루틴이에요
-            </S.TargetTime>
+            <S.TargetTime>{targetTimeMinute}분 공부 루틴이에요</S.TargetTime>
             <S.TargetAttainment>목표를 2/9 완료했어요</S.TargetAttainment>
           </S.Explanation>
         </S.NonSidebar>

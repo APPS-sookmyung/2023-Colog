@@ -1,4 +1,5 @@
 import * as S from "./ToDoList.style";
+import { useState } from "react";
 
 let ToDoListContents = [
   "User MicroService - 사용자 조회 ①",
@@ -13,12 +14,31 @@ let ToDoListContents = [
 ];
 
 const ToDoList = () => {
+  const [clickedIndices, setClickedIndices] = useState([]);
+
+  const contentClicked = (index) => {
+    if (clickedIndices.includes(index)) {
+      setClickedIndices(clickedIndices.filter((i) => i !== index));
+    } else {
+      setClickedIndices([...clickedIndices, index]);
+    }
+  };
+
   return (
     <S.ToDoList>
       <S.ToDoListTitle>To Do List</S.ToDoListTitle>
       <S.ToDoListContent>
         {ToDoListContents.map((content, index) => (
-          <S.ToDoListItem key={index}>
+          <S.ToDoListItem
+            key={index}
+            onClick={() => contentClicked(index)}
+            style={{
+              color: clickedIndices.includes(index) ? "lightGray" : "inherit",
+              textDecoration: clickedIndices.includes(index)
+                ? "line-through"
+                : "none",
+            }}
+          >
             {index + 1}. {content}
           </S.ToDoListItem>
         ))}
