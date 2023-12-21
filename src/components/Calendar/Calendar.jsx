@@ -56,7 +56,6 @@ const Calendar = () => {
         <S.NextMonthMoveButton onClick={goToPreviousMonth}>
           &lt;
         </S.NextMonthMoveButton>
-        {/* h2 */}
         <S.CalendarTitle>{`${year}년 ${month + 1}월`}</S.CalendarTitle>
         <S.PreviousMonthMoveButton onClick={goToNextMonth}>
           &gt;

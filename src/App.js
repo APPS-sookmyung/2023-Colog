@@ -12,14 +12,14 @@ import Calendar from "./components/Calendar/Calendar";
 const App = () => {
   return (
     <Router>
-      <Calendar />
-      {/* <Routes>
-          <Route path="/" element={<InitialHome />} />
-          <Route path="/timer" element={<TimerPage />} />
-          <Route path="/pomodoro" element={<PomodoroPage />} />
-          <Route path="/todolist" element={<ToDoListPage />} />
-          <Route path="/calendar" element={<CalendarPage />} />
-        </Routes> */}
+      {/* <Calendar /> */}
+      <Routes>
+        <Route path="/" element={<InitialHome />} />
+        <Route path="/timer" element={<TimerPage />} />
+        <Route path="/pomodoro" element={<PomodoroPage />} />
+        <Route path="/todolist" element={<ToDoListPage />} />
+        <Route path="/calendar" element={<CalendarPage />} />
+      </Routes>
     </Router>
   );
 };

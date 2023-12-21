@@ -1,11 +1,9 @@
-// Calendar.style.jsx
-
 import styled from "@emotion/styled";
 
 export const Calendar = styled.div`
   font-family: Arial, sans-serif;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
 `;
 
 export const CalendarHeader = styled.div`
@@ -26,6 +24,10 @@ export const NextMonthMoveButton = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: none;
+  &:hover {
+    color: lightGray;
+    cursor: pointer;
+  }
 `;
 
 export const PreviousMonthMoveButton = styled.button`
@@ -33,14 +35,19 @@ export const PreviousMonthMoveButton = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: none;
+  &:hover {
+    color: lightGray;
+    cursor: pointer;
+  }
 `;
 
 export const CalendarContent = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
   text-align: center;
+  color: lightgray;
 `;
 
 export const CalendarDay = styled.div`
