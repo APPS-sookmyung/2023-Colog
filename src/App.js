@@ -7,19 +7,19 @@ import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";
 import ToDoListPage from "./pages/ToDoListPage";
 import TotalStudyTime from "./components/TotalStudy/TotalStudy";
 import CalendarPage from "./pages/CalendarPage/CalendarPage";
+import Calendar from "./components/Calendar/Calendar";
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Routes>
+      <Calendar />
+      {/* <Routes>
           <Route path="/" element={<InitialHome />} />
           <Route path="/timer" element={<TimerPage />} />
           <Route path="/pomodoro" element={<PomodoroPage />} />
           <Route path="/todolist" element={<ToDoListPage />} />
           <Route path="/calendar" element={<CalendarPage />} />
-        </Routes>
-      </div>
+        </Routes> */}
     </Router>
   );
 };
