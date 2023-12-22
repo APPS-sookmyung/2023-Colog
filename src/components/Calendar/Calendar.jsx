@@ -11,6 +11,14 @@ const Calendar = () => {
   const [year, setYear] = useState(currentYear);
   const [month, setMonth] = useState(currentMonth);
 
+  // 선택된 날짜 상태 설정
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  // 날짜 클릭 핸들러
+  const handleDateClick = (day) => {
+    setSelectedDate(day);
+  };
+
   // 달력을 렌더링하는 함수
   const renderCalendar = () => {
     const firstDayOfMonth = new Date(year, month, 1);
@@ -28,10 +36,21 @@ const Calendar = () => {
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
+      const isCurrentDate =
+        day === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear();
+      const isSelectedDate = day === selectedDate;
+
       calendarDays.push(
-        <div key={day} className="calendar-day">
+        <S.CalendarDay
+          key={day}
+          current={isCurrentDate}
+          selected={isSelectedDate}
+          onClick={() => handleDateClick(day)}
+        >
           {day}
-        </div>
+        </S.CalendarDay>
       );
     }
 
