@@ -10,11 +10,3 @@ export const Content = styled.div`
   margin-right: 15%;
   align-items: center;
 `;
-export const NonSidebar = styled.div`
-  //   width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  //   padding-top: 7%;
-`;
