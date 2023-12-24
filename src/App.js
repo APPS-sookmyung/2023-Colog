@@ -13,14 +13,14 @@ const App = () => {
   return (
     <Router>
       {/* <DailyStats /> */}
-      <MonthlyStats />
-      {/* <Routes>
+      {/* <MonthlyStats /> */}
+      <Routes>
         <Route path="/" element={<InitialHome />} />
         <Route path="/timer" element={<TimerPage />} />
         <Route path="/pomodoro" element={<PomodoroPage />} />
         <Route path="/todolist" element={<ToDoListPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
-      </Routes> */}
+      </Routes>
     </Router>
   );
 };
