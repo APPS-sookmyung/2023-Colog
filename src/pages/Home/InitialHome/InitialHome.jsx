@@ -2,9 +2,6 @@
 
 import * as S from "./InitialHome.style";
 import LogoImage from "../../../assets/img/Logo.png";
-import BackgroundImage from "../../../assets/img/Colog.background.png";
-import Header from "../../../components/Header/Header";
-import Timer from "../../../components/Timer/Timer";
 import { Link, useNavigate } from "react-router-dom";
 
 const InitialHome = () => {
@@ -15,7 +12,6 @@ const InitialHome = () => {
   };
   return (
     <S.InitialHome>
-      <Header />
       <S.firstContainer>
         <S.Logo>
           <S.LogoImage src={LogoImage} alt="logo" />

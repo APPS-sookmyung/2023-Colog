@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import CountDown from "../../components/CountDown/CountDown";
 
@@ -9,7 +8,6 @@ const PomodoroPage = () => {
   let targetTimeMinute = 1;
   return (
     <S.PomodoroPage>
-      <Header />
       <S.Content>
         <Sidebar />
         <S.NonSidebar>

@@ -6,14 +6,11 @@ import TimerPage from "./pages/TimerPage/TimerPage";
 import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";
 import ToDoListPage from "./pages/ToDoListPage";
 import CalendarPage from "./pages/CalendarPage/CalendarPage";
-import MonthlyStats from "./components/MonthlyStats/MonthlyStats";
-import DailyStats from "./components/DailyStats/DailyStats";
 
 const App = () => {
   return (
     <Router>
-      {/* <DailyStats /> */}
-      {/* <MonthlyStats /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<InitialHome />} />
         <Route path="/timer" element={<TimerPage />} />
