@@ -3,7 +3,21 @@ import styled from "@emotion/styled";
 
 import BackgroundImage from "../../../assets/img/Colog.background.png";
 
-export const InitialHome = styled.div``;
+export const InitialHome = styled.div`
+  position: relative;
+  height: 1080px; /* 전체 높이 설정 */
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 480px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to top, #081116, #ffffff);
+    z-index: -1;
+  }
+`;
 
 // firstContainer
 export const firstContainer = styled.div`
@@ -38,7 +52,7 @@ export const secondThridContainer = styled.div`
   background-size: cover;
   width: 100%;
   height: 2160px;
-  box-shadow: inset -200px 0 0 0 #6e6f70, inset 200px 0 0 0 #6e6f70;
+  box-shadow: inset -200px 0 0 0 #172727, inset 200px 0 0 0 #172727;
   text-align: center;
 `;
 // secondContainer
@@ -87,10 +101,13 @@ export const fourthContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: #7a8789;
 `;
 export const startButton = styled.button`
   font-size: 100px;
 `;
 export const copyRightText = styled.h5`
   text-align: right;
+  color: lightGray;
 `;
