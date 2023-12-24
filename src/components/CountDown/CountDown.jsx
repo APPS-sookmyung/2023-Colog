@@ -84,9 +84,9 @@ const CountDown = ({
   return (
     <S.CountDown>
       <S.SelectTimerButtons>
-        <S.SelectTimerButton onClick={start}>START</S.SelectTimerButton>
-        <S.SelectTimerButton onClick={stop}>STOP</S.SelectTimerButton>
-        <S.SelectTimerButton onClick={reset}>RESET</S.SelectTimerButton>
+        <S.SelectTimerButtonStart onClick={start} />
+        <S.SelectTimerButtonStop onClick={stop} />
+        <S.SelectTimerButtonReset onClick={reset} />
       </S.SelectTimerButtons>
       <S.RestTime>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
         currentMinutes < 10 ? "0" : ""
