@@ -12,8 +12,8 @@ import DailyStats from "./components/DailyStats/DailyStats";
 const App = () => {
   return (
     <Router>
-      <DailyStats />
-      {/* <MonthlyStats /> */}
+      {/* <DailyStats /> */}
+      <MonthlyStats />
       {/* <Routes>
         <Route path="/" element={<InitialHome />} />
         <Route path="/timer" element={<TimerPage />} />
