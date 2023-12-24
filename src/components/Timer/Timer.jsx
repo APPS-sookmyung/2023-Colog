@@ -57,9 +57,9 @@ const Timer = (props) => {
     <S.Timer>
       <S.SelectTimerButtons onClick={setTime}>
         {setTime()}
-        <S.SelectTimerButton onClick={start}>START</S.SelectTimerButton>
-        <S.SelectTimerButton onClick={stop}>STOP</S.SelectTimerButton>
-        <S.SelectTimerButton onClick={reset}>RESET</S.SelectTimerButton>
+        <S.SelectTimerButtonStart onClick={start} />
+        <S.SelectTimerButtonStop onClick={stop} />
+        <S.SelectTimerButtonReset onClick={reset} />
       </S.SelectTimerButtons>
       <S.CountTime>
         {`${currentHours < 10 ? "0" : ""}${currentHours}h ${

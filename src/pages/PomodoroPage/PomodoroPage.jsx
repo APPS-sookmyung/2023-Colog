@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import CountDown from "../../components/CountDown/CountDown";
 
 import * as S from "./PomodoroPage.style";
 
 const PomodoroPage = () => {
-  let targetTimeMinute = 1;
+  let targetTimeMinute = 50;
   return (
     <S.PomodoroPage>
-      <Header />
       <S.Content>
         <Sidebar />
         <S.NonSidebar>

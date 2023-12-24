@@ -5,7 +5,7 @@ import * as S from "./MonthlyStats.style";
 const data = [
   {
     month: 2308,
-    totalTime: 4000, // uv가 값
+    totalTime: 4000,
   },
   {
     month: 2309,
@@ -31,13 +31,34 @@ const formatMonth = (value) => {
   return `${thirdDigit === 0 ? lastTwoDigits % 10 : lastTwoDigits}`;
 };
 
+const CustomXAxisTick = ({ x, y, payload }) => {
+  const isBold = payload.value === 2312; // 2312일 때만 볼드체 적용
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={0}
+        y={0}
+        dy={16}
+        fontSize={isBold ? 14 : 12}
+        fontWeight={isBold ? "bold" : "normal"}
+        textAnchor="middle"
+        fill="#666"
+      >
+        {formatMonth(payload.value)}
+      </text>
+    </g>
+  );
+};
+
 export default function MonthlyStats() {
   return (
     <S.MonthlyStats>
+      <S.MonthTitle>December</S.MonthTitle>
       <BarChart width={400} height={300} data={data}>
         <XAxis
           dataKey="month"
-          tickFormatter={formatMonth}
+          tick={<CustomXAxisTick />}
           axisLine={false}
           tickLine={false}
         />

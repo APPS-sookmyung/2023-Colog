@@ -1,11 +1,29 @@
 // Header.jsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./Header.style";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <S.Header>
+    <S.Header className={`fixed-header ${scrolled ? "scrolled" : ""}`}>
       <Link to="/" className="nav-link">
         Home
       </Link>
@@ -20,9 +38,6 @@ const Header = () => {
       </Link>
       <Link to="/calendar" className="nav-link">
         Calendar
-      </Link>
-      <Link to="/mypage" className="nav-link">
-        MyPage
       </Link>
     </S.Header>
   );

@@ -2,10 +2,10 @@
 
 import * as S from "./InitialHome.style";
 import LogoImage from "../../../assets/img/Logo.png";
-import BackgroundImage from "../../../assets/img/Colog.background.png";
-import Header from "../../../components/Header/Header";
-import Timer from "../../../components/Timer/Timer";
 import { Link, useNavigate } from "react-router-dom";
+
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const InitialHome = () => {
   const navigate = useNavigate();
@@ -15,7 +15,6 @@ const InitialHome = () => {
   };
   return (
     <S.InitialHome>
-      <Header />
       <S.firstContainer>
         <S.Logo>
           <S.LogoImage src={LogoImage} alt="logo" />
@@ -25,31 +24,44 @@ const InitialHome = () => {
       </S.firstContainer>
       <S.secondThridContainer>
         <S.secondContainer>
-          <S.secondDescription1>
-            뿌듯함을 채워주고 성취감을 극대화하는
-          </S.secondDescription1>
-          <S.secondDescription2>프로그래머 전용 타이머 앱</S.secondDescription2>
+          <AnimationOnScroll animateIn="animate__fadeInUp">
+            <S.secondDescription1>
+              뿌듯함을 채워주고 성취감을 극대화하는
+            </S.secondDescription1>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+            <S.secondDescription2>
+              프로그래머 전용 타이머 앱
+            </S.secondDescription2>
+          </AnimationOnScroll>
         </S.secondContainer>
+
         <S.thridContainer>
-          <S.thirdDescription1>
-            프로그래머만의 뿌듯함을 느끼고 싶으신가요?
-            <br />
-            <br />
-          </S.thirdDescription1>
-          <S.thirdDescription2>
-            나만의 코딩 기록 서비스, 코록은 타이머, 뽀모도로 등
-            <br />
-            집중을 위한 최적의 환경을 제공하고 월 별 통계를 통해
-            <br />
-            성취감을 극대화합니다. 코딩 시간, 기술 블로그 업로드 등
-            <br />
-            코딩 기록을 한 곳에 모아 보세요!
-          </S.thirdDescription2>
+          <AnimationOnScroll animateIn="animate__fadeInUp">
+            <S.thirdDescription1>
+              프로그래머만의 뿌듯함을 느끼고 싶으신가요?
+              <br />
+              <br />
+            </S.thirdDescription1>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+            <S.thirdDescription2>
+              나만의 코딩 기록 서비스, 코록은 타이머, 뽀모도로 등
+              <br />
+              집중을 위한 최적의 환경을 제공하고 월 별 통계를 통해
+              <br />
+              성취감을 극대화합니다. 코딩 시간, 기술 블로그 업로드 등
+              <br />
+              코딩 기록을 한 곳에 모아 보세요!
+            </S.thirdDescription2>
+          </AnimationOnScroll>
         </S.thridContainer>
       </S.secondThridContainer>
       <S.fourthContainer>
-        <S.startButton onClick={MoveTimerPage}>START !</S.startButton>
-        <S.copyRightText>Copyrightⓒ2023 Ajeong</S.copyRightText>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
+          <S.startButton onClick={MoveTimerPage}>START !</S.startButton>
+          <S.copyRightText>Copyrightⓒ2023 Ajeong</S.copyRightText>
+        </AnimationOnScroll>
       </S.fourthContainer>
     </S.InitialHome>
   );
