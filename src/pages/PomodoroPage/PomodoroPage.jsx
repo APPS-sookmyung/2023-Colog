@@ -5,7 +5,7 @@ import CountDown from "../../components/CountDown/CountDown";
 import * as S from "./PomodoroPage.style";
 
 const PomodoroPage = () => {
-  let targetTimeMinute = 1;
+  let targetTimeMinute = 50;
   return (
     <S.PomodoroPage>
       <S.Content>

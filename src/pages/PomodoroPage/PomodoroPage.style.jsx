@@ -3,10 +3,9 @@ export const PomodoroPage = styled.div``;
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  //   justify-content: center;
-  margin: 5%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   align-items: center;
 `;
 export const NonSidebar = styled.div`
