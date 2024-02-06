@@ -13,8 +13,8 @@ import CalendarPage from "./pages/CalendarPage/CalendarPage";
 const App = () => {
   let [modal, setModal] = useState(false);
 
-  const changeModalState = () => {
-    setModal(!modal);
+  const changeModalState = (state) => {
+    setModal(state);
   };
 
   return (
