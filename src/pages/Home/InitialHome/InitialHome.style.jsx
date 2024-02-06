@@ -44,6 +44,7 @@ export const LogoText = styled.h1`
 `;
 export const firstDescriptionText = styled.h3`
   margin-bottom: 100px;
+  font-weight: bold;
 `;
 
 // secondContainer
@@ -67,10 +68,12 @@ export const secondDescription1 = styled.div`
   color: white;
   font-size: 25px;
   margin-bottom: -20px;
+  letter-spacing: 2px;
 `;
 export const secondDescription2 = styled.h3`
   color: white;
-  font-size: 50px;
+  font-size: 60px;
+  letter-spacing: 10px;
 `;
 
 // thridContainer
@@ -82,15 +85,13 @@ export const thridContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-export const thirdDescription1 = styled.h1`
+
+  letter-spacing: 5px;
+  font-size: 20px;
   color: white;
-  font-size: 30px;
 `;
-export const thirdDescription2 = styled.h1`
-  color: white;
-  font-size: 30px;
-`;
+export const thirdDescription1 = styled.h1``;
+export const thirdDescription2 = styled.h1``;
 
 // fourthContainer
 export const fourthContainer = styled.div`
@@ -105,9 +106,23 @@ export const fourthContainer = styled.div`
   background-color: #7a8789;
 `;
 export const startButton = styled.button`
-  font-size: 100px;
+  font-size: 90px;
+  font-family: "SeoulHangang";
+  font-weight: bold;
+  letter-spacing: 20px;
+
+  border-radius: 10px;
+  border: none;
+
+  padding: 20px;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
 `;
 export const copyRightText = styled.h5`
   text-align: right;
   color: lightGray;
+  letter-spacing: 2px;
 `;
