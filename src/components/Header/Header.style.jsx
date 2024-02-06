@@ -4,19 +4,15 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   background-color: #3d5a80;
-  border-radius: 10px;
   color: white;
 
   padding-top: 20px;
   padding-bottom: 20px;
 
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 20px;
   font-weight: bold;
 
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   transition: transform 0.3s ease; /* 애니메이션 속성 추가 */
 
@@ -25,10 +21,10 @@ export const Header = styled.header`
   }
 
   .nav-link {
+    letter-spacing: 2px;
     text-decoration: none;
     color: inherit;
-    margin-left: 120px;
-    margin-right: 120px;
+
     &:hover {
       color: #2a4365;
       cursor: pointer;
