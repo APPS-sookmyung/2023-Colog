@@ -1,7 +1,7 @@
 // Header.jsx
 import React, { useEffect, useState } from "react";
 import * as S from "./Header.style";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,21 +24,36 @@ const Header = () => {
 
   return (
     <S.Header className={`fixed-header ${scrolled ? "scrolled" : ""}`}>
-      <Link to="/" className="nav-link">
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "navColorChange" : "navLink")}
+      >
         Home
-      </Link>
-      <Link to="/timer" className="nav-link">
+      </NavLink>
+      <NavLink
+        to="/timer"
+        className={({ isActive }) => (isActive ? "navColorChange" : "navLink")}
+      >
         Timer
-      </Link>
-      <Link to="/pomodoro" className="nav-link">
+      </NavLink>
+      <NavLink
+        to="/pomodoro"
+        className={({ isActive }) => (isActive ? "navColorChange" : "navLink")}
+      >
         Pomodoro
-      </Link>
-      <Link to="/todolist" className="nav-link">
+      </NavLink>
+      <NavLink
+        to="/todolist"
+        className={({ isActive }) => (isActive ? "navColorChange" : "navLink")}
+      >
         ToDoList
-      </Link>
-      <Link to="/calendar" className="nav-link">
+      </NavLink>
+      <NavLink
+        to="/calendar"
+        className={({ isActive }) => (isActive ? "navColorChange" : "navLink")}
+      >
         Calendar
-      </Link>
+      </NavLink>
     </S.Header>
   );
 };

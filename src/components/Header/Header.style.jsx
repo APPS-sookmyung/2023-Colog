@@ -20,7 +20,7 @@ export const Header = styled.header`
     transform: translateY(-100%); /* 스크롤 내려왔을 때 숨기기 */
   }
 
-  .nav-link {
+  .navLink {
     letter-spacing: 2px;
     text-decoration: none;
     color: inherit;
@@ -29,5 +29,12 @@ export const Header = styled.header`
       color: #2a4365;
       cursor: pointer;
     }
+  }
+
+  // 색 변경
+  .navColorChange {
+    color: #2a4365;
+    letter-spacing: 2px;
+    text-decoration: none;
   }
 `;
