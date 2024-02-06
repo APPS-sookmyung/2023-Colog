@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SeoulHangang";
+  font-weight: normal;
+  src: url("./fonts/서울한강\ 장체EB.ttf") format("truetype");
+}
+
+body {
+  font-family: "SeoulHangang";
+}
