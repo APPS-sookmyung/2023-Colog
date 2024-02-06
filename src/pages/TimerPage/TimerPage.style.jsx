@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+
 export const TimerPage = styled.div``;
 export const Content = styled.div`
   display: flex;
@@ -26,5 +27,9 @@ export const Explanation = styled.div`
   font-weight: bold;
   font-size: 20px;
 `;
-export const TargetTime = styled.div``;
-export const TargetAttainment = styled.div``;
+
+export const UpdateTimeExplanation = styled.div`
+  color: Gray;
+  font-size: 17px;
+  margin-top: -23px;
+`;
