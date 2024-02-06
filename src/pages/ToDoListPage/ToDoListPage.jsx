@@ -10,7 +10,6 @@ const ToDoListPage = () => {
   // let targetTimeSecond = 5;
   return (
     <S.ToDoListPage>
-      <Header />
       <S.Content>
         <Sidebar />
         <S.NonSidebar>
