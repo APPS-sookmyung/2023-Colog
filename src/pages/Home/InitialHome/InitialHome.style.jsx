@@ -44,6 +44,7 @@ export const LogoText = styled.h1`
 `;
 export const firstDescriptionText = styled.h3`
   margin-bottom: 100px;
+  font-weight: bold;
 `;
 
 // secondContainer
@@ -67,10 +68,12 @@ export const secondDescription1 = styled.div`
   color: white;
   font-size: 25px;
   margin-bottom: -20px;
+  letter-spacing: 2px;
 `;
 export const secondDescription2 = styled.h3`
   color: white;
-  font-size: 50px;
+  font-size: 60px;
+  letter-spacing: 10px;
 `;
 
 // thridContainer
@@ -82,15 +85,13 @@ export const thridContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-export const thirdDescription1 = styled.h1`
+
+  letter-spacing: 5px;
+  font-size: 20px;
   color: white;
-  font-size: 30px;
 `;
-export const thirdDescription2 = styled.h1`
-  color: white;
-  font-size: 30px;
-`;
+export const thirdDescription1 = styled.h1``;
+export const thirdDescription2 = styled.h1``;
 
 // fourthContainer
 export const fourthContainer = styled.div`
