@@ -30,7 +30,7 @@ const useTimer = (initialValue, ms) => {
   return { count, start, stop, reset };
 };
 
-const Timer = (props) => {
+const Timer = (props, { modalState }) => {
   // 타이머 기능
   const [currentHours, setCurrentHours] = useState(0);
   const [currentMinutes, setCurrentMinutes] = useState(0);
@@ -56,9 +56,9 @@ const Timer = (props) => {
   return (
     <S.Timer>
       <S.SelectTimerButtons onClick={setTime}>
-        {setTime()}
         <S.SelectTimerButtonStart onClick={start} />
         <S.SelectTimerButtonStop onClick={stop} />
+        <button onClick={props.modalState}>button</button>
       </S.SelectTimerButtons>
       <S.CountTime>
         {`${currentHours < 10 ? "0" : ""}${currentHours}h ${
