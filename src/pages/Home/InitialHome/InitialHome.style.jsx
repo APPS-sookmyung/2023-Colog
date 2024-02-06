@@ -105,9 +105,23 @@ export const fourthContainer = styled.div`
   background-color: #7a8789;
 `;
 export const startButton = styled.button`
-  font-size: 100px;
+  font-size: 90px;
+  font-family: "SeoulHangang";
+  font-weight: bold;
+  letter-spacing: 20px;
+
+  border-radius: 10px;
+  border: none;
+
+  padding: 20px;
+
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
 `;
 export const copyRightText = styled.h5`
   text-align: right;
   color: lightGray;
+  letter-spacing: 2px;
 `;

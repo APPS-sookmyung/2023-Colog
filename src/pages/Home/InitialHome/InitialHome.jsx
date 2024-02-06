@@ -59,7 +59,7 @@ const InitialHome = () => {
       </S.secondThridContainer>
       <S.fourthContainer>
         <AnimationOnScroll animateIn="animate__fadeInUp">
-          <S.startButton onClick={MoveTimerPage}>START !</S.startButton>
+          <S.startButton onClick={MoveTimerPage}>START!</S.startButton>
           <S.copyRightText>Copyrightⓒ2023 Ajeong</S.copyRightText>
         </AnimationOnScroll>
       </S.fourthContainer>
