@@ -9,6 +9,7 @@ export const Timer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  letter-spacing: 4px;
 `;
 
 export const CountTime = styled.div`

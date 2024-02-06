@@ -3,10 +3,11 @@ export const TimerPage = styled.div``;
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 7%;
   margin-left: 20%;
   margin-right: 20%;
   align-items: center;
+  letter-spacing: 1px;
 `;
 export const NonSidebar = styled.div`
   //   width: 70%;
