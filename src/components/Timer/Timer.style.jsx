@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import startButtonImage from "../../assets/img/startButton.png";
 import stopButtonImage from "../../assets/img/stopButton.png";
-import resetButtonImage from "../../assets/img/resetButton.png";
 
 export const Timer = styled.div`
   padding: 30px;
@@ -9,6 +8,7 @@ export const Timer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  letter-spacing: 4px;
 `;
 
 export const CountTime = styled.div`
@@ -42,22 +42,6 @@ export const SelectTimerButtonStart = styled.button`
 `;
 export const SelectTimerButtonStop = styled.button`
   background-image: url(${stopButtonImage});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
-  width: 100px;
-  height: 100px;
-  border: none;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(0.9);
-  }
-`;
-
-export const SelectTimerButtonReset = styled.button`
-  background-image: url(${resetButtonImage});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

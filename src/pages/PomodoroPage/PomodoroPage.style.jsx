@@ -25,5 +25,9 @@ export const Explanation = styled.div`
   font-weight: bold;
   font-size: 20px;
 `;
-export const TargetTime = styled.div``;
-export const TargetAttainment = styled.div``;
+
+export const UpdateTimeExplanation = styled.div`
+  color: Red;
+  font-size: 17px;
+  margin-top: -23px;
+`;

@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
+
 export const TimerPage = styled.div``;
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 7%;
   margin-left: 20%;
   margin-right: 20%;
   align-items: center;
+  letter-spacing: 1px;
 `;
 export const NonSidebar = styled.div`
   //   width: 70%;
@@ -25,5 +27,9 @@ export const Explanation = styled.div`
   font-weight: bold;
   font-size: 20px;
 `;
-export const TargetTime = styled.div``;
-export const TargetAttainment = styled.div``;
+
+export const UpdateTimeExplanation = styled.div`
+  color: Gray;
+  font-size: 17px;
+  margin-top: -23px;
+`;

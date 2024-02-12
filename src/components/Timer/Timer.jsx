@@ -22,12 +22,7 @@ const useTimer = (initialValue, ms) => {
     intervalRef.current = null;
   }, []);
 
-  const reset = useCallback(() => {
-    setCount(0);
-    stop();
-  }, [stop]);
-
-  return { count, start, stop, reset };
+  return { count, start, stop };
 };
 
 const Timer = (props) => {
@@ -36,10 +31,19 @@ const Timer = (props) => {
   const [currentMinutes, setCurrentMinutes] = useState(0);
   const [currentSeconds, setCurrentSeconds] = useState(0);
 
-  const { count, start, stop, reset } = useTimer(0, 1000);
+  const { count, start, stop } = useTimer(0, 1000);
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const setTime = () => {
     props.getTime(count);
+    if (isModalVisible) {
+      // console.log(isModalVisible);
+      props.modalState(true);
+    } else {
+      // console.log(isModalVisible);
+      props.modalState(false);
+    }
   };
 
   useEffect(() => {
@@ -56,10 +60,20 @@ const Timer = (props) => {
   return (
     <S.Timer>
       <S.SelectTimerButtons onClick={setTime}>
-        {setTime()}
-        <S.SelectTimerButtonStart onClick={start} />
-        <S.SelectTimerButtonStop onClick={stop} />
-        <S.SelectTimerButtonReset onClick={reset} />
+        <S.SelectTimerButtonStart
+          onClick={() => {
+            start();
+            console.log(isModalVisible);
+            setIsModalVisible(true);
+          }}
+        />
+        <S.SelectTimerButtonStop
+          onClick={() => {
+            stop();
+            console.log(isModalVisible);
+            setIsModalVisible(false);
+          }}
+        />
       </S.SelectTimerButtons>
       <S.CountTime>
         {`${currentHours < 10 ? "0" : ""}${currentHours}h ${
