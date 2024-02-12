@@ -1,40 +1,80 @@
 import styled from "@emotion/styled";
+// import { css } from "styled-components";
+
+import homeButtonImage from "../../assets/icon/home_icon.png";
+import homeButtonImageColor from "../../assets/icon/home_icon_color.png";
+import timerButtonImage from "../../assets/icon/timer_icon.png";
+import timerButtonImageColor from "../../assets/icon/timer_icon_color.png";
+import toDoListButtonImage from "../../assets/icon/check_icon.png";
+import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 
 export const Header = styled.header`
+  width: 140px;
+  height: 100vh;
+  background-color: #e1eeff;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #3d5a80;
-  color: white;
+`;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+export const buttonStyle = `
+  width: 64px;
+  height: 64px;
 
-  justify-content: space-around;
-  font-size: 20px;
-  font-weight: bold;
+  background-size: contain;
+  background-color: #e1eeff;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 50px 0 0 0;
 
-  width: 100%;
-  transition: transform 0.3s ease; /* 애니메이션 속성 추가 */
+  border: none;
+  cursor: pointer;
 
-  &.scrolled {
-    transform: translateY(-100%); /* 스크롤 내려왔을 때 숨기기 */
+  &:active {
+    transform: scale(0.9);
   }
 
-  .navLink {
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: inherit;
+`;
 
-    &:hover {
-      color: #2a4365;
-      cursor: pointer;
-    }
-  }
+export const HomeButton = styled.button`
+  background-image: url(${homeButtonImage});
+  ${buttonStyle}
+`;
 
-  // 색 변경
-  .navColorChange {
-    color: #2a4365;
-    letter-spacing: 2px;
-    text-decoration: none;
-  }
+export const HomeButtonColor = styled.button`
+  background-image: url(${homeButtonImageColor});
+  ${buttonStyle}
+`;
+
+export const TimerButton = styled.button`
+  ${buttonStyle}
+  background-image: url(${timerButtonImage});
+
+  width: 61px;
+  height: 61px;
+`;
+
+export const TimerButtonColor = styled.button`
+  ${buttonStyle}
+  background-image: url(${timerButtonImageColor});
+
+  width: 61px;
+  height: 61px;
+`;
+
+export const ToDoListButton = styled.button`
+  ${buttonStyle}
+  background-image: url(${toDoListButtonImage});
+
+  width: 48px;
+  height: 48px;
+`;
+
+export const ToDoListButtonColor = styled.button`
+  ${buttonStyle}
+  background-image: url(${toDoListButtonImageColor});
+
+  width: 48px;
+  height: 48px;
 `;

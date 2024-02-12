@@ -20,8 +20,8 @@ const App = () => {
   return (
     <Router>
       <Header />
-      {modal == true ? <Footer /> : null}
-      <Routes>
+      {/* {modal == true ? <Footer /> : null} */}
+      {/* <Routes>
         <Route path="/" element={<InitialHome />} />
         <Route
           path="/timer"
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/pomodoro" element={<PomodoroPage />} />
         <Route path="/todolist" element={<ToDoListPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
-      </Routes>
+      </Routes> */}
     </Router>
   );
 };
