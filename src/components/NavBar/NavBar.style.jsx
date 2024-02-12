@@ -7,7 +7,7 @@ import timerButtonImageColor from "../../assets/icon/timer_icon_color.png";
 import toDoListButtonImage from "../../assets/icon/check_icon.png";
 import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 
-export const Header = styled.header`
+export const NavBar = styled.header`
   width: 140px;
   height: 100vh;
   background-color: #e1eeff;

@@ -9,6 +9,7 @@ import TimerPage from "./pages/TimerPage/TimerPage";
 import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";
 import ToDoListPage from "./pages/ToDoListPage";
 import CalendarPage from "./pages/CalendarPage/CalendarPage";
+import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
   let [modal, setModal] = useState(false);
@@ -19,9 +20,11 @@ const App = () => {
 
   return (
     <Router>
-      <Header />
-      {/* {modal == true ? <Footer /> : null} */}
-      {/* <Routes>
+      <NavBar />
+      {/* <Header /> */}
+
+      {/* {modal == true ? <Footer /> : null}
+      <Routes>
         <Route path="/" element={<InitialHome />} />
         <Route
           path="/timer"
