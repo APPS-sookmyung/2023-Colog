@@ -18,24 +18,30 @@ export const Header = styled.header`
   align-items: center;
 `;
 
-export const buttonStyle = `
-  width: 64px;
-  height: 64px;
+export const LeftBar = styled.div``;
 
-  background-size: contain;
-  background-color: #e1eeff;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 50px 0 0 0;
-
-  border: none;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(0.9);
-  }
-
+export const RightBar = styled.div`
+  position: relative;
+  left: 70px;
+  top: ${({ top }) => top};
 `;
+
+export const buttonStyle = `
+width: 64px;
+height: 64px;
+
+background-size: contain;
+background-color: #e1eeff;
+background-repeat: no-repeat;
+background-position: center;
+margin: 50px 0 0 0;
+
+border: none;
+cursor: pointer;
+
+&:active {
+  transform: scale(0.9);
+}`;
 
 export const HomeButton = styled.button`
   background-image: url(${homeButtonImage});
@@ -77,4 +83,17 @@ export const ToDoListButtonColor = styled.button`
 
   width: 48px;
   height: 48px;
+`;
+
+export const ClickBar = styled.div`
+  background-color: #61a5ff;
+
+  width: 11px;
+  height: 66px;
+  border-radius: 10px;
+
+  display: flex;
+  float: left;
+  flex-direction: column;
+  justify-content: center;
 `;

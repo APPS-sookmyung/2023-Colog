@@ -8,6 +8,20 @@ const Header = () => {
 
   return (
     <S.Header>
+      <S.RightBar
+        top={
+          location.pathname === "/"
+            ? "115px"
+            : location.pathname === "/timer"
+            ? "230px"
+            : location.pathname === "/todolist"
+            ? "340px"
+            : "0px"
+        }
+      >
+        <S.ClickBar />
+      </S.RightBar>
+
       <NavLink to="/">
         {window.location.pathname === "/" ? (
           <S.HomeButtonColor />
