@@ -19,22 +19,23 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <NavBar />
-      {/* <Header /> */}
+    <div className="App">
+      <Router>
+        <NavBar />
+        <Header />
 
-      {/* {modal == true ? <Footer /> : null}
-      <Routes>
-        <Route path="/" element={<InitialHome />} />
-        <Route
-          path="/timer"
-          element={<TimerPage changeModal={changeModalState} />}
-        />
-        <Route path="/pomodoro" element={<PomodoroPage />} />
-        <Route path="/todolist" element={<ToDoListPage />} />
-        <Route path="/calendar" element={<CalendarPage />} />
-      </Routes> */}
-    </Router>
+        {/* <Routes>
+          <Route path="/" element={<InitialHome />} />
+          <Route
+            path="/timer"
+            element={<TimerPage changeModal={changeModalState} />}
+          />
+          <Route path="/pomodoro" element={<PomodoroPage />} />
+          <Route path="/todolist" element={<ToDoListPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+        </Routes> */}
+      </Router>
+    </div>
   );
 };
 

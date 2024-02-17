@@ -1,23 +1,24 @@
-/* .App {
-  width: 100vw;
-  height: 100vh;
-  background: gray;
+.App {
+  /* width: 100%;
+  height: 100%; */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.divisionScreen {
-  display: flex;
-  height: 100vh;
-  flex: 1;
-} */
-
-/* 
-.header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: red;
-} */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+@font-face {
+  font-family: "SeoulHangang";
+  src: url(./fonts/서울한강\ 장체EB.ttf);
+}
+
+@font-face {
+  font-family: "GapyeongWave";
+  src: url(./fonts/GapyeongWave.ttf);
+}
+
+@font-face {
+  font-family: "Jomhuria";
+  src: url(./fonts/Jomhuria-Regular.ttf);
+}
