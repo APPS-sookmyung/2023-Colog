@@ -8,7 +8,8 @@ import toDoListButtonImage from "../../assets/icon/check_icon.png";
 import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 
 export const NavBar = styled.header`
-  width: 140px;
+  // position: fixed;
+  width: 8vw;
   height: 100vh;
   background-color: #e1eeff;
 

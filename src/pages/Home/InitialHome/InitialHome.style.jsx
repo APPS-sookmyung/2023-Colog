@@ -2,7 +2,9 @@
 import styled from "@emotion/styled";
 
 export const InitialHome = styled.div`
-  position: relative;
-  height: 1080px; /* 전체 높이 설정 */
+  // position: relative;
+  width: 100vw;
+  height: 100vh;
+
   background-color: red;
 `;

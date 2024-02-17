@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const Header = styled.div`
-  // background-color: red;
   margin-left: 10%;
+  margin-top: 3%;
 `;
 
 export const FinalDayDescription = styled.div`
@@ -11,9 +11,6 @@ export const FinalDayDescription = styled.div`
 
   font-size: 30px;
   font-family: "SeoulHangang";
-
-  // background-color: blue;
-  margin-left: 10%;
 `;
 
 export const Dday = styled.div`
@@ -22,7 +19,4 @@ export const Dday = styled.div`
 
   font-size: 150px;
   font-family: "Jomhuria";
-  margin-left: 10%;
-
-  // background-color: black;
 `;
