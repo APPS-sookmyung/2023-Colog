@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 
 export const Header = styled.div`
   position: fixed;
-  margin-left: 10%;
-  margin-top: 3%;
+  margin-left: 250px;
+  margin-top: 100px;
 `;
 
 export const FinalDayDescription = styled.div`
