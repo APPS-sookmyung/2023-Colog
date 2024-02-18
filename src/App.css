@@ -1,11 +1,16 @@
 .App {
   display: flex;
-  position: fixed;
+  /* position: fixed; */
 
   /* @media all and (max-width: 1000px) {
     width: 100wh;
     background-color: blue;
   } */
+}
+
+.content {
+  /* width: 80%; */
+  background-color: brown;
 }
 
 @font-face {

@@ -19,13 +19,15 @@ const App = () => {
         <NavBar className="NavBar" />
         <div className="division">
           <Header />
-          <Routes>
-            <Route path="/" element={<InitialHome />} />
-            <Route path="/timer" element={<TimerPage />} />
-            <Route path="/pomodoro" element={<PomodoroPage />} />
-            <Route path="/todolist" element={<ToDoListPage />} />
-            <Route path="/calendar" element={<CalendarPage />} />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<InitialHome />} />
+              <Route path="/timer" element={<TimerPage />} />
+              <Route path="/pomodoro" element={<PomodoroPage />} />
+              <Route path="/todolist" element={<ToDoListPage />} />
+              <Route path="/calendar" element={<CalendarPage />} />
+            </Routes>
+          </div>
         </div>
       </Router>
     </div>
