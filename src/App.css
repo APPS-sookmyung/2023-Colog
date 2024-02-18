@@ -1,11 +1,35 @@
 .App {
   display: flex;
-  position: fixed;
-
+  /* position: fixed; */
+  /* position: relative; */
   /* @media all and (max-width: 1000px) {
     width: 100wh;
     background-color: blue;
   } */
+}
+
+.content {
+  position: absolute;
+
+  width: 85vw;
+  height: 60%;
+
+  top: 300px;
+  left: 140px;
+
+  background-color: brown;
+
+  @media all and (min-width: 1400px) {
+    background-color: black;
+    width: 90vw;
+  }
+
+  @media all and (max-width: 1000px) {
+    top: 170px;
+    left: 0px;
+    background-color: blue;
+    width: 100vw;
+  }
 }
 
 @font-face {
