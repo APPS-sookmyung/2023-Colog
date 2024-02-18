@@ -7,7 +7,7 @@ import timerButtonImageColor from "../../assets/icon/timer_icon_color.png";
 import toDoListButtonImage from "../../assets/icon/check_icon.png";
 import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 
-export const NavBar = styled.header`
+export const NavBar = styled.div`
   padding: 38px;
   height: 100vh;
   background-color: #e1eeff;
@@ -15,6 +15,14 @@ export const NavBar = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media all and (max-width: 1000px) {
+    width: 100wh;
+    flex-direction: row;
+    // TODO
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const LeftBar = styled.div``;
