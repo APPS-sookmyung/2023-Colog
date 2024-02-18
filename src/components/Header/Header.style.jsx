@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 
 export const Header = styled.div`
-  position: fixed;
+  // position: fixed;
+  position: relative;
+
   margin-left: 250px;
   margin-top: 100px;
 `;
