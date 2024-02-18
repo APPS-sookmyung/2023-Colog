@@ -2,10 +2,10 @@
   display: flex;
   position: fixed;
 
-  @media all and (max-width: 1000px) {
+  /* @media all and (max-width: 1000px) {
     width: 100wh;
     background-color: blue;
-  }
+  } */
 }
 
 @font-face {
@@ -22,7 +22,3 @@
   font-family: "Jomhuria";
   src: url(./fonts/Jomhuria-Regular.ttf);
 }
-
-/* @media screen {
-  max-width: 1000px;
-} */
