@@ -14,11 +14,8 @@
 
 .content {
   position: absolute;
-  /* width: 91.6vw;
-  height: 60vh; */
 
   width: 85vw;
-
   height: 60%;
 
   top: 300px;
@@ -28,11 +25,11 @@
 
   @media all and (min-width: 1400px) {
     background-color: black;
-    /* width: 90%; */
     width: 90vw;
   }
 
   @media all and (max-width: 1000px) {
+    top: 170px;
     left: 0px;
     background-color: blue;
     width: 100vw;

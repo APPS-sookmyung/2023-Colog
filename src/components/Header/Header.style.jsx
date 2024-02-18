@@ -1,11 +1,15 @@
 import styled from "@emotion/styled";
 
 export const Header = styled.div`
-  // position: fixed;
   position: relative;
 
   margin-left: 250px;
   margin-top: 100px;
+
+  @media all and (max-width: 1000px) {
+    margin-left: 100px;
+    margin-top: 50px;
+  }
 `;
 
 export const FinalDayDescription = styled.div`
@@ -14,6 +18,13 @@ export const FinalDayDescription = styled.div`
 
   font-size: 30px;
   font-family: "SeoulHangang";
+
+  @media all and (max-width: 1000px) {
+    width: 82px;
+    height: 11px;
+
+    font-size: 20px;
+  }
 `;
 
 export const Dday = styled.div`
@@ -22,4 +33,11 @@ export const Dday = styled.div`
 
   font-size: 150px;
   font-family: "Jomhuria";
+
+  @media all and (max-width: 1000px) {
+    width: 183px;
+    height: 76px;
+
+    font-size: 100px;
+  }
 `;
