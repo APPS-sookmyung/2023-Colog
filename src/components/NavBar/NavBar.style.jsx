@@ -10,8 +10,7 @@ import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 export const NavBar = styled.div`
   position: fixed;
 
-  top: 0px;
-  left: 0px;
+  // top: 0px;
   width: 140px;
   height: 100vh;
 
@@ -22,10 +21,19 @@ export const NavBar = styled.div`
   align-items: center;
 
   @media all and (max-width: 1000px) {
-    width: 100wh;
+    // position: fixed;
+    // display: flex;
+    width: 100vw;
+    bottom: 0;
+    height: 100px;
+
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+  }
+
+  @media all and (min-width: 1000px) {
+    top: 0px;
+    left: 0px;
   }
 `;
 
@@ -37,7 +45,7 @@ export const RightBar = styled.div`
   top: ${({ top }) => top};
 
   @media all and (max-width: 1000px) {
-    // left: 0px;
+    right: ${({ top }) => top};
   }
 `;
 

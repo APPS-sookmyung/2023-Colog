@@ -1,5 +1,5 @@
 .App {
-  /* display: flex; */
+  display: flex;
   /* position: fixed; */
   /* position: relative; */
   /* @media all and (max-width: 1000px) {
@@ -9,7 +9,13 @@
 }
 
 .NavBar {
-  /* width: 50vw; */
+  /* @media all and (max-width: 1000px) {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    background-color: pink;
+  } */
 }
 
 .content {
