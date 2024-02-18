@@ -8,16 +8,6 @@
   } */
 }
 
-.NavBar {
-  /* @media all and (max-width: 1000px) {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    right: 0;
-    background-color: pink;
-  } */
-}
-
 .content {
   position: absolute;
 
