@@ -13,6 +13,11 @@ export const ToDoListPage = styled.div`
   @media all and (min-width: 1400px) {
     gap: 10%;
   }
+
+  @media all and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const ToDoList = styled.div`

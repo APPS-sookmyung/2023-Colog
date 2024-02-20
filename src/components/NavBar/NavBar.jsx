@@ -21,11 +21,11 @@ const NavBar = () => {
           }
           left={
             location.pathname === "/"
-              ? "23%"
+              ? "24%"
               : location.pathname === "/timer"
-              ? "46%"
+              ? "47%"
               : location.pathname === "/todolist"
-              ? "68%"
+              ? "70%"
               : "0px"
           }
         >

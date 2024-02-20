@@ -7,24 +7,10 @@ import timerButtonImageColor from "../../assets/icon/timer_icon_color.png";
 import toDoListButtonImage from "../../assets/icon/check_icon.png";
 import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 
-export const NavBar = styled.div`
-  
-
-  @media all and (max-width: 1250px) {
-    position: fixed;
-    display: flex;
-
-    width: 100vw;
-    width: 100vw;
-    bottom: 0;
-    height: 100px;
-    left: 0;
-    background-color: #e1eeff;
-    margin-left: 10%;
-`;
+export const NavBar = styled.div``;
 
 export const NavBarBackgroundColor = styled.div`
-  position: fixed;
+  // position: fixed;
 
   background-color: #e1eeff;
 
