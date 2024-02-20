@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 export const Header = styled.div`
   // position: relative;
 
-  margin-left: 250px;
-  margin-top: 100px;
+  margin-left: 120%;
+  margin-top: 40%;
 
   @media all and (max-width: 1000px) {
     margin-left: 100px;
@@ -16,7 +16,7 @@ export const FinalDayDescription = styled.div`
   width: 102px;
   height: 31px;
 
-  font-size: 30px;
+  font-size: 20px;
   font-family: "SeoulHangang";
 
   @media all and (max-width: 1000px) {
@@ -31,7 +31,7 @@ export const Dday = styled.div`
   width: 203px;
   height: 96px;
 
-  font-size: 150px;
+  font-size: 100px;
   font-family: "Jomhuria";
 
   @media all and (max-width: 1000px) {
