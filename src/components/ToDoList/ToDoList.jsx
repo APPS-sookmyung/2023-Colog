@@ -26,7 +26,7 @@ const ToDoList = () => {
 
   return (
     <S.ToDoList>
-      <S.ToDoListTitle>To Do List</S.ToDoListTitle>
+      <S.ToDoListTitle>TODO</S.ToDoListTitle>
       <S.ToDoListContent>
         {ToDoListContents.map((content, index) => (
           <S.ToDoListItem
