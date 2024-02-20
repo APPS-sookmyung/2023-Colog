@@ -6,6 +6,10 @@
   @media all and (max-width: 1250px) {
     flex-direction: column-reverse;
   }
+
+  @media all and (min-width: 1100px) and (max-width: 1250px) {
+    gap: 55px;
+  }
 }
 
 /* .NavBar {
@@ -26,18 +30,12 @@
 
   @media all and (min-width: 1250px) {
     position: absolute;
-    /* position: fixed; */
-    bottom: 0;
   }
 
   @media all and (max-width: 1250px) {
     width: 100vw;
     margin-bottom: 50px;
   }
-
-  /* @media all and (max-width: 1100px) {
-    
-  } */
 }
 
 @font-face {
