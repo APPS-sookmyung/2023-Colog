@@ -1,32 +1,30 @@
 import styled from "@emotion/styled";
 
 export const Calendar = styled.div`
-  font-family: Arial, sans-serif;
-  width: 500px;
-  height: 300px;
+  font-family: "Jomhuria";
 `;
 
 export const CalendarHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #eee;
-  padding: 10px;
+  padding: 20px 0 10px 0;
 `;
 
 export const CalendarTitle = styled.h2`
   margin: 0;
-  font-size: 20px;
+  font-size: 45px;
 `;
 
 export const MoveButton = styled.button`
-  font-size: 18px;
+  color: #e1eeff;
+  font-size: 45px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #e1eeff;
   border: none;
 
   &:hover {
-    color: lightGray;
+    color: black;
   }
 `;
 
@@ -38,10 +36,9 @@ export const CalendarContent = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
-  padding: 20px;
   text-align: center;
-  color: lightgray;
+  font-size: 42px;
+  color: black;
 `;
 
 export const CalendarDay = styled.div`
@@ -55,14 +52,13 @@ export const CalendarDay = styled.div`
   ${(props) =>
     props.current &&
     `
-    color: black;
-    font-weight: bold;
+    color: #61A5FF;
   `}
 
   ${(props) =>
     props.selected &&
     `
     color: white;
-    background-color: #3D5A80;
+    background-color: #61A5FF;
   `}
 `;

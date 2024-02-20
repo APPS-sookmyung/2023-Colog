@@ -17,10 +17,10 @@
   top: 300px;
   left: 140px;
 
-  background-color: brown;
+  /* background-color: brown; */
 
   @media all and (min-width: 1400px) {
-    background-color: black;
+    /* background-color: black; */
     width: 90vw;
   }
 
