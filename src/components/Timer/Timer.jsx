@@ -33,17 +33,8 @@ const Timer = (props) => {
 
   const { count, start, stop } = useTimer(0, 1000);
 
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
   const setTime = () => {
     props.getTime(count);
-    if (isModalVisible) {
-      // console.log(isModalVisible);
-      props.modalState(true);
-    } else {
-      // console.log(isModalVisible);
-      props.modalState(false);
-    }
   };
 
   useEffect(() => {
@@ -63,15 +54,11 @@ const Timer = (props) => {
         <S.SelectTimerButtonStart
           onClick={() => {
             start();
-            console.log(isModalVisible);
-            setIsModalVisible(true);
           }}
         />
         <S.SelectTimerButtonStop
           onClick={() => {
             stop();
-            console.log(isModalVisible);
-            setIsModalVisible(false);
           }}
         />
       </S.SelectTimerButtons>

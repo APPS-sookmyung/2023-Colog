@@ -12,7 +12,7 @@ export const Timer = styled.div`
 `;
 
 export const CountTime = styled.div`
-  background-color: #3d5a80;
+  background-color: #61a5ff;
   color: white;
   text-align: center;
   margin-top: 20px;
@@ -21,8 +21,6 @@ export const CountTime = styled.div`
   padding: 30px;
 `;
 
-export const RestTime = styled.div``;
-
 export const SelectTimerButtons = styled.div``;
 
 export const SelectTimerButtonStart = styled.button`
@@ -30,7 +28,7 @@ export const SelectTimerButtonStart = styled.button`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: white;
+  background-color: #e1eeff;
   width: 100px;
   height: 100px;
   border: none;
@@ -45,7 +43,7 @@ export const SelectTimerButtonStop = styled.button`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: white;
+  background-color: #e1eeff;
   width: 100px;
   height: 100px;
   border: none;

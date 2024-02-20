@@ -1,69 +1,42 @@
 import React from "react";
-import { BarChart, Bar, XAxis } from "recharts";
+import { BarChart, Bar, LabelList } from "recharts";
 import * as S from "./MonthlyStats.style";
 
 const data = [
   {
-    month: 2308,
-    totalTime: 4000,
+    month: "11",
+    totalTime: 210,
   },
   {
-    month: 2309,
-    totalTime: 3000,
+    month: "12",
+    totalTime: 300,
   },
   {
-    month: 2310,
-    totalTime: 2000,
+    month: "01",
+    totalTime: 200,
   },
   {
-    month: 2311,
-    totalTime: 2780,
+    month: "02",
+    totalTime: 278,
   },
   {
-    month: 2312,
-    totalTime: 1890,
+    month: "03",
+    totalTime: 183,
+    fill: "#61A5FF",
   },
 ];
-
-const formatMonth = (value) => {
-  const lastTwoDigits = value % 100;
-  const thirdDigit = Math.floor((value % 1000) / 100);
-  return `${thirdDigit === 0 ? lastTwoDigits % 10 : lastTwoDigits}`;
-};
-
-const CustomXAxisTick = ({ x, y, payload }) => {
-  const isBold = payload.value === 2312; // 2312일 때만 볼드체 적용
-
-  return (
-    <g transform={`translate(${x},${y})`}>
-      <text
-        x={0}
-        y={0}
-        dy={16}
-        fontSize={isBold ? 14 : 12}
-        fontWeight={isBold ? "bold" : "normal"}
-        textAnchor="middle"
-        fill="#666"
-      >
-        {formatMonth(payload.value)}
-      </text>
-    </g>
-  );
-};
 
 export default function MonthlyStats() {
   return (
     <S.MonthlyStats>
-      <S.MonthTitle>December</S.MonthTitle>
-      <BarChart width={400} height={300} data={data}>
-        <XAxis
-          dataKey="month"
-          tick={<CustomXAxisTick />}
-          axisLine={false}
-          tickLine={false}
-        />
-        <Bar dataKey="totalTime" fill="#2B2D42" />
-      </BarChart>
+      <S.MonthTitle>STUDY TIME</S.MonthTitle>
+      <S.BarChart>
+        <BarChart width={350} height={250} data={data}>
+          <Bar dataKey="totalTime" fill="#C2DDFF">
+            <LabelList dataKey="month" position="top" />
+          </Bar>
+        </BarChart>
+      </S.BarChart>
     </S.MonthlyStats>
   );
 }
