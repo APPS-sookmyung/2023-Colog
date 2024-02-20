@@ -10,7 +10,7 @@ import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 export const NavBar = styled.div`
   
 
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     position: fixed;
     display: flex;
 
@@ -32,7 +32,7 @@ export const NavBarBackgroundColor = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     width: 100vw;
     bottom: 0;
     height: 100px;
@@ -42,7 +42,7 @@ export const NavBarBackgroundColor = styled.div`
     justify-content: space-between;
   }
 
-  @media all and (min-width: 1000px) {
+  @media all and (min-width: 1250px) {
     width: 140px;
     height: 100vh;
 
@@ -66,13 +66,13 @@ export const RightBar = styled.div`
   position: relative;
 
   // 1000px보다 크면
-  @media all and (min-width: 1000px) {
+  @media all and (min-width: 1250px) {
     left: 70px;
     top: ${({ top }) => top};
   }
 
   // 1000px보다 작으면
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     left: ${({ left }) => left};
     bottom: 48px;
   }
@@ -88,7 +88,7 @@ export const buttonStyle = `
   background-position: center;
 
   // 1000px보다 크면
-  @media all and (min-width: 1000px) {
+  @media all and (min-width: 1250px) {
     margin: 50px 0 0 0;
   }
 
@@ -189,7 +189,7 @@ export const ClickBar = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     width: 66px;
     height: 11px;
   }

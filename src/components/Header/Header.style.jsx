@@ -6,7 +6,7 @@ export const Header = styled.div`
   margin-left: 120%;
   margin-top: 40%;
 
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     margin-left: 100px;
     margin-top: 50px;
   }
@@ -19,7 +19,7 @@ export const FinalDayDescription = styled.div`
   font-size: 20px;
   font-family: "SeoulHangang";
 
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     width: 82px;
     height: 11px;
 
@@ -34,7 +34,7 @@ export const Dday = styled.div`
   font-size: 100px;
   font-family: "Jomhuria";
 
-  @media all and (max-width: 1000px) {
+  @media all and (max-width: 1250px) {
     width: 183px;
     height: 76px;
 

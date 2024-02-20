@@ -9,8 +9,9 @@ export const InitialHome = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 10%;
   padding-top: 30px;
+
+  gap: 10%;
 `;
 
 export const Calendar = styled.div`

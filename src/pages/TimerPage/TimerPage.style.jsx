@@ -8,11 +8,14 @@ export const TimerPage = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 10%;
   padding-top: 30px;
 
   color: #4e7ab2;
   letter-spacing: 1px;
+
+  @media all and (min-width: 1400px) {
+    gap: 10%;
+  }
 `;
 
 export const RightSection = styled.div`

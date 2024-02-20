@@ -10,7 +10,7 @@ const TotalStudy = () => {
         <br />
         오늘의 목표 시간은 5h 5m 5s 이에요
         <br />
-        목표를 2/9 완료했어요
+        목표를 2 / 9 완료했어요
       </S.Explanation>
     </S.TotalStudy>
   );
