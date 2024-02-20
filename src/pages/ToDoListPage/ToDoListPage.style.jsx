@@ -17,3 +17,22 @@ export const ToDoList = styled.div`
   padding: 0 40px 40px 40px;
   border-radius: 10px;
 `;
+
+export const RightSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ToDoBar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1%;
+
+  img {
+    width: 63%;
+  }
+`;

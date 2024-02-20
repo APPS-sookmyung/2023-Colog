@@ -15,9 +15,28 @@ export const TimerPage = styled.div`
   letter-spacing: 1px;
 `;
 
+export const RightSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Timer = styled.div`
   padding: 30px;
 
   background-color: #e1eeff;
   border-radius: 10px;
+`;
+
+export const ToDoBar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1%;
+
+  img {
+    width: 63%;
+  }
 `;

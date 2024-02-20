@@ -1,4 +1,5 @@
 import React from "react";
+import ToDoBar from "../../assets/img/ToDoBar.png";
 
 import Timer from "../../components/Timer/Timer";
 import TotalStudy from "../../components/TotalStudy/TotalStudy";
@@ -12,7 +13,12 @@ const TimerPage = () => {
       <S.Timer>
         <Timer getTime={getTime} />
       </S.Timer>
-      <TotalStudy />
+      <S.RightSection>
+        <TotalStudy />
+        <S.ToDoBar>
+          <img src={ToDoBar} alt="ToDoBar" />
+        </S.ToDoBar>
+      </S.RightSection>
     </S.TimerPage>
   );
 };
