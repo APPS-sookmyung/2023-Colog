@@ -14,6 +14,10 @@ export const CalendarHeader = styled.div`
 export const CalendarTitle = styled.h2`
   margin: 0;
   font-size: 45px;
+
+  @media all and (max-width: 500px) {
+    font-size: 40px;
+  }
 `;
 
 export const MoveButton = styled.button`
@@ -25,6 +29,10 @@ export const MoveButton = styled.button`
 
   &:hover {
     color: black;
+  }
+
+  @media all and (max-width: 500px) {
+    font-size: 30px;
   }
 `;
 
@@ -61,4 +69,9 @@ export const CalendarDay = styled.div`
     color: white;
     background-color: #61A5FF;
   `}
+
+  @media all and (max-width: 500px) {
+    width: 20px;
+    font-size: 35px;
+  }
 `;

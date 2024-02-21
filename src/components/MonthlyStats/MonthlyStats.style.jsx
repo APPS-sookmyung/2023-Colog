@@ -18,6 +18,10 @@ export const MonthTitle = styled.h2`
   text-align: center;
   font-size: 45px;
   // padding: -10%;
+
+  @media all and (max-width: 500px) {
+    font-size: 40px;
+  }
 `;
 
 export const BarChart = styled.div`
@@ -26,6 +30,9 @@ export const BarChart = styled.div`
   display: flex;
   justify-content: center;
 
-  // width: 100%;
-  // height: 100%;
+  @media all and (max-width: 500px) {
+    font-size: 25px;
+
+    width: 120%;
+  }
 `;

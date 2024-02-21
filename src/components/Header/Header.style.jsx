@@ -10,6 +10,11 @@ export const Header = styled.div`
     margin-left: 100px;
     margin-top: 50px;
   }
+
+  @media all and (max-width: 500px) {
+    margin-left: 60px;
+    margin-top: 60px;
+  }
 `;
 
 export const FinalDayDescription = styled.div`

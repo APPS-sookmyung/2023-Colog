@@ -35,6 +35,10 @@ export const Timer = styled.div`
 
   background-color: #e1eeff;
   border-radius: 10px;
+
+  @media all and (max-width: 500px) {
+    width: 70%;
+  }
 `;
 
 export const ToDoBar = styled.div`
@@ -46,5 +50,12 @@ export const ToDoBar = styled.div`
 
   img {
     width: 63%;
+  }
+
+  @media all and (max-width: 500px) {
+    img {
+      margin-top: 1.5%;
+      width: 70%;
+    }
   }
 `;

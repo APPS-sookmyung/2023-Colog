@@ -9,6 +9,11 @@ export const Timer = styled.div`
   justify-content: center;
   align-items: center;
   letter-spacing: 4px;
+
+  @media all and (max-width: 500px) {
+    letter-spacing: 2px;
+    padding: 10px;
+  }
 `;
 
 export const CountTime = styled.div`
@@ -19,9 +24,20 @@ export const CountTime = styled.div`
   font-size: 50px;
   font-weight: bold;
   padding: 30px;
+
+  @media all and (max-width: 500px) {
+    font-size: 35px;
+    padding: 15px;
+  }
 `;
 
-export const SelectTimerButtons = styled.div``;
+export const SelectTimerButtons = styled.div`
+  @media all and (max-width: 500px) {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+  }
+`;
 
 export const SelectTimerButtonStart = styled.button`
   background-image: url(${startButtonImage});
