@@ -9,8 +9,14 @@ export const InitialHome = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 10%;
   padding-top: 30px;
+
+  gap: 10%;
+
+  @media all and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const Calendar = styled.div`

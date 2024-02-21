@@ -1,10 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import "./App.css";
 
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import InitialHome from "./pages/Home/InitialHome/InitialHome";
 import TimerPage from "./pages/TimerPage/TimerPage";
 import PomodoroPage from "./pages/PomodoroPage/PomodoroPage";

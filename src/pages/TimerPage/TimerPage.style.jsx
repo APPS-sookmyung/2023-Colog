@@ -8,11 +8,26 @@ export const TimerPage = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 10%;
   padding-top: 30px;
 
   color: #4e7ab2;
   letter-spacing: 1px;
+
+  @media all and (min-width: 1400px) {
+    gap: 10%;
+  }
+
+  @media all and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+`;
+
+export const RightSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Timer = styled.div`
@@ -22,17 +37,14 @@ export const Timer = styled.div`
   border-radius: 10px;
 `;
 
-export const Explanation = styled.div`
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
+export const ToDoBar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  padding: 30px;
+  margin-top: 1%;
 
-  background-color: #e1eeff;
-  border-radius: 10px;
-`;
-
-export const UpdateTimeExplanation = styled.div`
-  font-size: 17px;
+  img {
+    width: 63%;
+  }
 `;
