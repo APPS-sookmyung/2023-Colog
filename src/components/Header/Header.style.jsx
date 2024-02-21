@@ -1,37 +1,48 @@
 import styled from "@emotion/styled";
 
-export const Header = styled.header`
-  display: flex;
-  align-items: center;
-  background-color: #3d5a80;
-  border-radius: 10px;
-  color: white;
+export const Header = styled.div`
+  // position: relative;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-left: 120%;
+  margin-top: 40%;
 
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: bold;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: transform 0.3s ease; /* 애니메이션 속성 추가 */
-
-  &.scrolled {
-    transform: translateY(-100%); /* 스크롤 내려왔을 때 숨기기 */
+  @media all and (max-width: 1250px) {
+    margin-left: 100px;
+    margin-top: 50px;
   }
 
-  .nav-link {
-    text-decoration: none;
-    color: inherit;
-    margin-left: 120px;
-    margin-right: 120px;
-    &:hover {
-      color: #2a4365;
-      cursor: pointer;
-    }
+  @media all and (max-width: 500px) {
+    margin-left: 60px;
+    margin-top: 60px;
+  }
+`;
+
+export const FinalDayDescription = styled.div`
+  width: 102px;
+  height: 31px;
+
+  font-size: 20px;
+  font-family: "SeoulHangang";
+
+  @media all and (max-width: 1250px) {
+    width: 82px;
+    height: 11px;
+
+    font-size: 20px;
+  }
+`;
+
+export const Dday = styled.div`
+  width: 203px;
+  height: 96px;
+
+  font-size: 100px;
+  font-family: "Jomhuria";
+
+  @media all and (max-width: 1250px) {
+    width: 183px;
+    height: 76px;
+
+    font-size: 100px;
   }
 `;

@@ -1,29 +1,61 @@
 import styled from "@emotion/styled";
-export const TimerPage = styled.div``;
-export const Content = styled.div`
+
+export const TimerPage = styled.div`
+  width: 100%;
+  height: 100%;
+
   display: flex;
-  justify-content: space-between;
-  margin-top: 10%;
-  margin-left: 20%;
-  margin-right: 20%;
+  justify-content: center;
   align-items: center;
+
+  padding-top: 30px;
+
+  color: #4e7ab2;
+  letter-spacing: 1px;
+
+  @media all and (min-width: 1400px) {
+    gap: 10%;
+  }
+
+  @media all and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
-export const NonSidebar = styled.div`
-  //   width: 70%;
+
+export const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //   padding-top: 7%;
 `;
 
-export const remainingTime = styled.div`
-  text-align: center;
+export const Timer = styled.div`
+  padding: 30px;
+
+  background-color: #e1eeff;
+  border-radius: 10px;
+
+  @media all and (max-width: 500px) {
+    width: 70%;
+  }
 `;
-export const Explanation = styled.div`
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
+
+export const ToDoBar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1%;
+
+  img {
+    width: 63%;
+  }
+
+  @media all and (max-width: 500px) {
+    img {
+      margin-top: 1.5%;
+      width: 70%;
+    }
+  }
 `;
-export const TargetTime = styled.div``;
-export const TargetAttainment = styled.div``;

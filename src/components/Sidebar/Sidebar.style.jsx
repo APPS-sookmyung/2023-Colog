@@ -10,7 +10,7 @@ export const Sidebar = styled.div`
 `;
 export const SidebarProfileImage = styled.img``;
 export const SidebarName = styled.div`
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
 `;
 export const SidebarLine = styled.div`
@@ -22,7 +22,9 @@ export const SidebarLine = styled.div`
   margin-bottom: 20px;
 `;
 export const SidebarIntroduce = styled.div`
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 10px;
 `;
-export const SidebarLink = styled.div``;
+export const SidebarLink = styled.div`
+  font-size: 20px;
+`;

@@ -1,26 +1,53 @@
 import styled from "@emotion/styled";
 
-export const ToDoListPage = styled.div``;
-export const Content = styled.div`
-  width: 75%;
-  display: flex;
-  margin: 5%;
-  margin-top: 10%;
-  margin-left: 15%;
-  margin-right: 15%;
-  align-items: center;
-`;
-export const NonSidebar = styled.div`
+export const ToDoListPage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  width: 110%;
+
+  padding-top: 30px;
+
+  color: #4e7ab2;
+  letter-spacing: 1px;
+
+  @media all and (min-width: 1400px) {
+    gap: 10%;
+  }
+
+  @media all and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const ToDoList = styled.div`
-  margin-left: 120px;
+  background-color: #e1eeff;
+  padding: 0 40px 40px 40px;
+  border-radius: 10px;
 `;
-export const TotalStudy = styled.div`
-  margin-right: 150px;
+
+export const RightSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ToDoBar = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1%;
+
+  img {
+    width: 63%;
+  }
+
+  @media all and (max-width: 500px) {
+    img {
+      margin-top: 1.5%;
+      width: 70%;
+    }
+  }
 `;

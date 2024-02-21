@@ -4,6 +4,12 @@
   src: url("./fonts/서울한강\ 장체EB.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Jomhuria-Regular";
+  font-weight: normal;
+  src: url("./fonts/Jomhuria-Regular.ttf") format("truetype");
+}
+
 body {
   font-family: "SeoulHangang";
 }

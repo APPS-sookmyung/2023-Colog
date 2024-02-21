@@ -3,19 +3,15 @@ import * as S from "./TotalStudy.style";
 const TotalStudy = () => {
   return (
     <S.TotalStudy>
-      <S.TotalStudyTape></S.TotalStudyTape>
-      <S.TotalStudyPostIt>
-        <S.TotalStudyContent1>
-          <S.TotalStudyTitle>STUDY</S.TotalStudyTitle>
-          <S.TotalStudyDay>Day 10</S.TotalStudyDay>
-          <S.TotalStudyTime>23H 36M</S.TotalStudyTime>
-        </S.TotalStudyContent1>
-        <S.TotalStudyContent2>
-          <S.TotalStudyTitle>TODO</S.TotalStudyTitle>
-          <S.TotalStudyGoal>3H 00M</S.TotalStudyGoal>
-          <S.TotalStudyDDay>D-10</S.TotalStudyDDay>
-        </S.TotalStudyContent2>
-      </S.TotalStudyPostIt>
+      <S.Explanation>
+        <S.UpdateTimeExplanation>
+          오전 4시 기준으로 시간을 업데이트합니다
+        </S.UpdateTimeExplanation>
+        <br />
+        오늘의 목표 시간은 5h 5m 5s 이에요
+        <br />
+        목표를 2 / 9 완료했어요
+      </S.Explanation>
     </S.TotalStudy>
   );
 };

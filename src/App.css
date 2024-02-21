@@ -1,15 +1,54 @@
-/* .App {
-  width: 100vw;
-  height: 100vh;
-  background: gray;
-
+.App {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  /* position: fixed; */
+  /* position: relative; */
+  @media all and (max-width: 1250px) {
+    flex-direction: column-reverse;
+  }
+
+  @media all and (min-width: 1100px) and (max-width: 1250px) {
+    gap: 55px;
+  }
 }
 
-.divisionScreen {
-  display: flex;
-  height: 100vh;
-  flex: 1;
+/* .NavBar {
+  @media all and (min-width: 1250px) {
+    position: fixed;
+    width: 140px;
+    height: 100vh;
+
+    bottom: 0;
+  }
 } */
+
+.content {
+  width: 90vw;
+  left: 9%;
+
+  /* background-color: brown; */
+
+  @media all and (min-width: 1250px) {
+    position: absolute;
+  }
+
+  @media all and (max-width: 1250px) {
+    width: 100vw;
+    margin-bottom: 50px;
+  }
+}
+
+@font-face {
+  font-family: "SeoulHangang";
+  src: url(./fonts/서울한강\ 장체EB.ttf);
+}
+
+@font-face {
+  font-family: "GapyeongWave";
+  src: url(./fonts/GapyeongWave.ttf);
+}
+
+@font-face {
+  font-family: "Jomhuria";
+  src: url(./fonts/Jomhuria-Regular.ttf);
+}

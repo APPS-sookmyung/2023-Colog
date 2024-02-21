@@ -17,8 +17,13 @@ const PomodoroPage = () => {
             initialSeconds={0}
           />
           <S.Explanation>
-            <S.TargetTime>{targetTimeMinute}분 공부 루틴이에요</S.TargetTime>
-            <S.TargetAttainment>목표를 2/9 완료했어요</S.TargetAttainment>
+            <S.UpdateTimeExplanation>
+              한 사이클을 달성하지 못할 시 공부 시간이 측정되지 않아요!
+            </S.UpdateTimeExplanation>
+            <br />
+            {targetTimeMinute}분 공부 루틴이에요
+            <br />
+            목표를 2/9 완료했어요
           </S.Explanation>
         </S.NonSidebar>
       </S.Content>
