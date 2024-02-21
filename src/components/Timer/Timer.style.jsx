@@ -9,6 +9,11 @@ export const Timer = styled.div`
   justify-content: center;
   align-items: center;
   letter-spacing: 4px;
+
+  @media all and (max-width: 500px) {
+    letter-spacing: 2px;
+    padding: 10px;
+  }
 `;
 
 export const CountTime = styled.div`
