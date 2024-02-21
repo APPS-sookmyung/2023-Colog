@@ -19,9 +19,22 @@ export const CountTime = styled.div`
   font-size: 50px;
   font-weight: bold;
   padding: 30px;
+
+  @media all and (max-width: 500px) {
+    // width: 70%;
+    font-size: 35px;
+    padding: 15px;
+  }
 `;
 
-export const SelectTimerButtons = styled.div``;
+export const SelectTimerButtons = styled.div`
+  @media all and (max-width: 500px) {
+    width: 70%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+  }
+`;
 
 export const SelectTimerButtonStart = styled.button`
   background-image: url(${startButtonImage});

@@ -21,6 +21,10 @@ export const TimerPage = styled.div`
     flex-direction: column;
     gap: 20px;
   }
+
+  @media all and (max-width: 500px) {
+    // width: 70%;
+  }
 `;
 
 export const RightSection = styled.div`
