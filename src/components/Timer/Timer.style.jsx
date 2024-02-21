@@ -21,7 +21,6 @@ export const CountTime = styled.div`
   padding: 30px;
 
   @media all and (max-width: 500px) {
-    // width: 70%;
     font-size: 35px;
     padding: 15px;
   }
@@ -30,7 +29,6 @@ export const CountTime = styled.div`
 export const SelectTimerButtons = styled.div`
   @media all and (max-width: 500px) {
     width: 70%;
-    background-color: red;
     display: flex;
     flex-direction: row;
   }
