@@ -43,4 +43,11 @@ export const ToDoBar = styled.div`
   img {
     width: 63%;
   }
+
+  @media all and (max-width: 500px) {
+    img {
+      margin-top: 1.5%;
+      width: 70%;
+    }
+  }
 `;
