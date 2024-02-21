@@ -7,7 +7,12 @@ import timerButtonImageColor from "../../assets/icon/timer_icon_color.png";
 import toDoListButtonImage from "../../assets/icon/check_icon.png";
 import toDoListButtonImageColor from "../../assets/icon/check_icon_color.png";
 
-export const NavBar = styled.div``;
+export const NavBar = styled.div`
+  // 핸드폰
+  @media all and (max-width: 500px) {
+    background-color: #e1eeff;
+  }
+`;
 
 export const NavBarBackgroundColor = styled.div`
   // position: fixed;
