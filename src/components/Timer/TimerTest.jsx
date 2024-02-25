@@ -16,14 +16,13 @@ const TimerTest = () => {
 
   // 시간 불러오는 함수, 시간 초기화
   useEffect(() => {
-    // 시간 불러오는 함수
+    // 시간 불러오는 함수 /
     const getTimeDB = async () => {
       try {
         const docRef = doc(db, "studyTime", "month");
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-          setStudyTime(docSnap.data());
-          console.log(studyTime?.time);
+          setStudyTime(docSnap.data().time);
         }
       } catch (error) {
         console.error("Error fetching study time:", error);
@@ -36,16 +35,11 @@ const TimerTest = () => {
     // setTime();
   }, []);
 
-  const setTime = async () => {
-    // console.log(studyTime?.time);
-  };
-
   useEffect(() => {
-    if (!isLoading) {
-      setCurrentSeconds(studyTime?.time);
-      setTime(studyTime?.time);
+    if (studyTime !== undefined) {
+      setCurrentSeconds(studyTime);
     }
-  }, []);
+  }, [studyTime]);
 
   return (
     <S.Timer>
