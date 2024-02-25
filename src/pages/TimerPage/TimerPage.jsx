@@ -6,12 +6,10 @@ import TotalStudy from "../../components/TotalStudy/TotalStudy";
 import * as S from "./TimerPage.style";
 
 const TimerPage = () => {
-  const getTime = (count) => {};
-
   return (
     <S.TimerPage>
       <S.Timer>
-        <Timer getTime={getTime} />
+        <Timer />
       </S.Timer>
       <S.RightSection>
         <TotalStudy />

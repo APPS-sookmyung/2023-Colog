@@ -2,6 +2,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase-config.js";
 import { useEffect, useState } from "react";
 
+// 시간 불러오는 함수
 const Test = () => {
   const [studyTime, setStudyTime] = useState();
 
