@@ -1,8 +1,11 @@
 import React, { useCallback, useRef, useState, useEffect } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase-config.js";
+
 import * as S from "./Timer.style";
 
 const useTimer = (initialValue, ms) => {
-  const [count, setCount] = useState(initialValue);
+  const [count, setCount] = useState(initialValue ? initialValue : 0);
   const intervalRef = useRef(null);
 
   const start = useCallback(() => {
@@ -26,18 +29,42 @@ const useTimer = (initialValue, ms) => {
 };
 
 const Timer = (props) => {
+  // db에서 시간 불러오는 변수&함수
+  const [studyTime, setStudyTime] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const getTimeDB = async () => {
+      try {
+        const docRef = doc(db, "studyTime", "month");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setStudyTime(docSnap.data().time);
+        }
+      } catch (error) {
+        console.error("Error fetching study time:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    getTimeDB();
+  }, []);
+
   // 타이머 기능
   const [currentHours, setCurrentHours] = useState(0);
   const [currentMinutes, setCurrentMinutes] = useState(0);
   const [currentSeconds, setCurrentSeconds] = useState(0);
 
-  const { count, start, stop } = useTimer(0, 1000);
+  const { count, start, stop } = useTimer(studyTime, 1000);
+  console.log(studyTime);
 
   const setTime = () => {
     props.getTime(count);
   };
 
   useEffect(() => {
+    if (!studyTime) return;
     const checkMinutes = Math.floor(count / 60);
     const hours = Math.floor(count / 3600);
     const minutes = checkMinutes % 60;
