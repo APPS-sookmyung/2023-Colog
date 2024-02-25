@@ -30,7 +30,7 @@ export const Calendar = styled.div`
   }
 `;
 
-export const MonthlyStats = styled.div`
+export const RightSection = styled.div`
   padding: 0 30px 0 30px;
 
   background-color: #e1eeff;
