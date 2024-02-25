@@ -1,21 +1,28 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
 
 import Calendar from "../../../components/Calendar/Calendar";
+import DailyStats from "../../../components/DailyStats/DailyStats";
 import MonthlyStats from "../../../components/MonthlyStats/MonthlyStats";
 import Test from "../../../components/Test/Test";
 
 import * as S from "./InitialHome.style";
 
 const InitialHome = () => {
+  const [calendarSelected, setCalendarSelected] = useState(false);
+
+  const handleCalendarSelectedChange = (selected) => {
+    setCalendarSelected(selected);
+  };
+
   return (
     <S.InitialHome>
-      <Test />
+      {/* <Test /> */}
       <S.Calendar>
-        <Calendar />
+        <Calendar onCalendarSelectedChange={handleCalendarSelectedChange} />
       </S.Calendar>
-      <S.MonthlyStats>
-        <MonthlyStats />
-      </S.MonthlyStats>
+      <S.RightSection>
+        {calendarSelected ? <DailyStats /> : <MonthlyStats />}
+      </S.RightSection>
     </S.InitialHome>
   );
 };
