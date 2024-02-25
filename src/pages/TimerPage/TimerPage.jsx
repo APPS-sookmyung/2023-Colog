@@ -2,18 +2,14 @@ import React from "react";
 import ToDoBar from "../../assets/img/ToDoBar.png";
 
 import Timer from "../../components/Timer/Timer";
-import TimerTest from "../../components/Timer/TimerTest";
 import TotalStudy from "../../components/TotalStudy/TotalStudy";
 import * as S from "./TimerPage.style";
 
 const TimerPage = () => {
-  const getTime = (count) => {};
-
   return (
     <S.TimerPage>
       <S.Timer>
-        {/* <Timer getTime={getTime} /> */}
-        <TimerTest />
+        <Timer />
       </S.Timer>
       <S.RightSection>
         <TotalStudy />
