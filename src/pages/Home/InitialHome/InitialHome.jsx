@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Calendar from "../../../components/Calendar/Calendar";
+import DailyStats from "../../../components/DailyStats/DailyStats";
 import MonthlyStats from "../../../components/MonthlyStats/MonthlyStats";
 import Test from "../../../components/Test/Test";
 
@@ -20,7 +21,7 @@ const InitialHome = () => {
         <Calendar onCalendarSelectedChange={handleCalendarSelectedChange} />
       </S.Calendar>
       <S.RightSection>
-        {calendarSelected ? <Test /> : <MonthlyStats />}
+        {calendarSelected ? <DailyStats /> : <MonthlyStats />}
       </S.RightSection>
     </S.InitialHome>
   );
