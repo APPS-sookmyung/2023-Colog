@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState, useEffect } from "react";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase-config.js";
 
 import * as S from "./Timer.style";
@@ -52,6 +52,18 @@ const Timer = () => {
 
   const stop = () => {
     setIsTimeRunning(false);
+    // 현재 시간 저장 로직 구현
+    timeUpdate();
+  };
+
+  // db 시간 업데이트 변수
+  const timeUpdate = async () => {
+    try {
+      const timeRef = doc(db, "studyTime", "month");
+      await updateDoc(timeRef, { time: count });
+    } catch (error) {
+      console.error("Error fetching study time:", error);
+    }
   };
 
   // 타이머 업데이트
