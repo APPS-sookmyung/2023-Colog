@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./Calendar.style";
 
-const Calendar = ({ onCalendarSelectedChange }) => {
+const Calendar = ({ onCalendarSelectedChange, onPropDateFunction }) => {
   // 현재 날짜를 가져오기
   const today = new Date();
   const currentYear = today.getFullYear();
@@ -15,9 +15,10 @@ const Calendar = ({ onCalendarSelectedChange }) => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   // 날짜 클릭 핸들러
-  const handleDateClick = (day) => {
+  const handleDateClick = (year, month, day) => {
     setSelectedDate(day);
     onCalendarSelectedChange(true);
+    onPropDateFunction(year, month + 1, day);
   };
 
   // 달력을 렌더링하는 함수
@@ -48,7 +49,7 @@ const Calendar = ({ onCalendarSelectedChange }) => {
           key={day}
           current={isCurrentDate}
           selected={isSelectedDate}
-          onClick={() => handleDateClick(day)}
+          onClick={() => handleDateClick(year, month, day)}
         >
           {day}
         </S.CalendarDay>
