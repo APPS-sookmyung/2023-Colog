@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState, useEffect } from "react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase-config.js";
+import CustomDate from "../CustomDate/CustomDate";
 
 import * as S from "./Timer.style";
 
@@ -19,7 +20,7 @@ const Timer = () => {
     // 시간 불러오는 함수
     const getTimeDB = async () => {
       try {
-        const docRef = doc(db, "studyTime", "month");
+        const docRef = doc(db, "studyTime", CustomDate());
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
@@ -59,7 +60,7 @@ const Timer = () => {
   // db 시간 업데이트 변수
   const timeUpdate = async () => {
     try {
-      const timeRef = doc(db, "studyTime", "month");
+      const timeRef = doc(db, "studyTime", CustomDate());
       await updateDoc(timeRef, { time: count });
     } catch (error) {
       console.error("Error fetching study time:", error);
