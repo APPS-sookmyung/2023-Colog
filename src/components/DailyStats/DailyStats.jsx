@@ -28,18 +28,17 @@ export default function DailyStats({ day, month, year }) {
     getTimeDB();
   }, []);
 
-  // useEffect(
-  //   ({ studyTime }) => {
-  //     const hours = Math.floor(studyTime / 3600);
-  //     const minutes = Math.floor((studyTime % 3600) / 60);
-  //     const seconds = (studyTime % 3600) % 60;
+  useEffect(() => {
+    if (studyTime) {
+      const hours = Math.floor(studyTime / 3600);
+      const minutes = Math.floor((studyTime % 3600) / 60);
+      const seconds = (studyTime % 3600) % 60;
 
-  //     setCurrentHours(hours);
-  //     setCurrentMinutes(minutes);
-  //     setCurrentSeconds(seconds);
-  //   },
-  //   [day]
-  // );
+      setCurrentHours(hours);
+      setCurrentMinutes(minutes);
+      setCurrentSeconds(seconds);
+    }
+  }, [studyTime]);
 
   return (
     <S.DailyStats>
@@ -47,12 +46,12 @@ export default function DailyStats({ day, month, year }) {
         {year}.{month}.{day}
       </S.Title>
       <br />
-      <S.Content>{studyTime}</S.Content>
-      {/* <S.Content>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
+      {/* <S.Content>{studyTime}</S.Content> */}
+      <S.Content>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
         currentMinutes < 10 ? "0" : ""
       }${currentMinutes}m ${
         currentSeconds < 10 ? "0" : ""
-      }${currentSeconds}s`}</S.Content> */}
+      }${currentSeconds}s`}</S.Content>
       <S.AchievementRate>목표를 2 / 9 달성했어요! </S.AchievementRate>
     </S.DailyStats>
   );
