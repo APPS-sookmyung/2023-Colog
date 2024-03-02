@@ -17,7 +17,6 @@ export default function DailyStats({ day, month, year }) {
     const getTimeDB = async () => {
       try {
         const docRef = doc(db, "studyTime", CustomDate());
-        console.log(CustomDate());
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
