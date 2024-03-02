@@ -15,10 +15,12 @@ export default function DailyStats({ day, month, year }) {
   useEffect(() => {
     const getTimeDB = async () => {
       try {
-        const docRef = doc(db, "studyTime", "20240224");
+        const docRef = doc(db, "studyTime", "20240229");
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
+        } else {
+          setStudyTime(0);
         }
       } catch (error) {
         console.log("ERROR fetching study time : ", error);
