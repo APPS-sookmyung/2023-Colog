@@ -3,6 +3,7 @@ import * as S from "./DailyStats.style";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase-config.js";
 import { useEffect, useState } from "react";
+import CustomDate from "../CustomDate/CustomDate";
 
 export default function DailyStats({ day, month, year }) {
   const [studyTime, setStudyTime] = useState();
@@ -15,7 +16,8 @@ export default function DailyStats({ day, month, year }) {
   useEffect(() => {
     const getTimeDB = async () => {
       try {
-        const docRef = doc(db, "studyTime", "20240229");
+        const docRef = doc(db, "studyTime", CustomDate());
+        console.log(CustomDate());
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
