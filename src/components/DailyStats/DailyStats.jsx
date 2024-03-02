@@ -27,7 +27,6 @@ export default function DailyStats({ day, month, year }) {
     const getTimeDB = async () => {
       try {
         const docRef = doc(db, "studyTime", formattedDateStr);
-        console.log(formattedDateStr);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
@@ -43,16 +42,20 @@ export default function DailyStats({ day, month, year }) {
   }, [day]);
 
   useEffect(() => {
-    if (studyTime) {
+    if (studyTime !== undefined) {
       const hours = Math.floor(studyTime / 3600);
       const minutes = Math.floor((studyTime % 3600) / 60);
-      const seconds = (studyTime % 3600) % 60;
+      const seconds = studyTime % 60;
 
       setCurrentHours(hours);
       setCurrentMinutes(minutes);
       setCurrentSeconds(seconds);
+    } else {
+      setCurrentHours(0);
+      setCurrentMinutes(0);
+      setCurrentSeconds(0);
     }
-  }, [day]);
+  }, [studyTime]);
 
   return (
     <S.DailyStats>
@@ -60,7 +63,6 @@ export default function DailyStats({ day, month, year }) {
         {year}.{month}.{day}
       </S.Title>
       <br />
-      {/* <S.Content>{studyTime}</S.Content> */}
       <S.Content>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
         currentMinutes < 10 ? "0" : ""
       }${currentMinutes}m ${
