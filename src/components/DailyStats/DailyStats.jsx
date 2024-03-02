@@ -13,11 +13,20 @@ export default function DailyStats({ day, month, year }) {
   const [currentMinutes, setCurrentMinutes] = useState(0);
   const [currentHours, setCurrentHours] = useState(0);
 
+  const formattedDate = ({ day, month, year }) => {
+    return (
+      year.toString() +
+      (month.toString() < 10 ? "0" + month.toString() : month.toString()) +
+      (day.toString() < 10 ? "0" + day.toString() : day.toString())
+    );
+  };
+
+  const formattedDateStr = formattedDate({ day, month, year });
+
   useEffect(() => {
     const getTimeDB = async () => {
       try {
-        const docRef = doc(db, "studyTime", CustomDate());
-        console.log(CustomDate());
+        const docRef = doc(db, "studyTime", formattedDateStr);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
@@ -30,17 +39,21 @@ export default function DailyStats({ day, month, year }) {
     };
 
     getTimeDB();
-  }, []);
+  }, [day]);
 
   useEffect(() => {
-    if (studyTime) {
+    if (studyTime !== undefined) {
       const hours = Math.floor(studyTime / 3600);
       const minutes = Math.floor((studyTime % 3600) / 60);
-      const seconds = (studyTime % 3600) % 60;
+      const seconds = studyTime % 60;
 
       setCurrentHours(hours);
       setCurrentMinutes(minutes);
       setCurrentSeconds(seconds);
+    } else {
+      setCurrentHours(0);
+      setCurrentMinutes(0);
+      setCurrentSeconds(0);
     }
   }, [studyTime]);
 
@@ -50,7 +63,6 @@ export default function DailyStats({ day, month, year }) {
         {year}.{month}.{day}
       </S.Title>
       <br />
-      {/* <S.Content>{studyTime}</S.Content> */}
       <S.Content>{`${currentHours < 10 ? "0" : ""}${currentHours}h ${
         currentMinutes < 10 ? "0" : ""
       }${currentMinutes}m ${
