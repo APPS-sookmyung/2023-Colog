@@ -13,10 +13,21 @@ export default function DailyStats({ day, month, year }) {
   const [currentMinutes, setCurrentMinutes] = useState(0);
   const [currentHours, setCurrentHours] = useState(0);
 
+  const formattedDate = ({ day, month, year }) => {
+    return (
+      year.toString() +
+      (month.toString() < 10 ? "0" + month.toString() : month.toString()) +
+      (day.toString() < 10 ? "0" + day.toString() : day.toString())
+    );
+  };
+
+  const formattedDateStr = formattedDate({ day, month, year });
+
   useEffect(() => {
     const getTimeDB = async () => {
       try {
-        const docRef = doc(db, "studyTime", CustomDate());
+        const docRef = doc(db, "studyTime", formattedDateStr);
+        console.log(formattedDateStr);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
@@ -29,7 +40,7 @@ export default function DailyStats({ day, month, year }) {
     };
 
     getTimeDB();
-  }, []);
+  }, [day]);
 
   useEffect(() => {
     if (studyTime) {
@@ -41,7 +52,7 @@ export default function DailyStats({ day, month, year }) {
       setCurrentMinutes(minutes);
       setCurrentSeconds(seconds);
     }
-  }, [studyTime]);
+  }, [day]);
 
   return (
     <S.DailyStats>
