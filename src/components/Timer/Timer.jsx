@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState, useEffect } from "react";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase-config.js";
 import CustomDate from "../CustomDate/CustomDate";
 
@@ -24,6 +24,9 @@ const Timer = () => {
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setStudyTime(docSnap.data().time);
+        } else {
+          // db 만들기
+          await setDoc(doc(db, "studyTime", CustomDate()), { time: 0 });
         }
       } catch (error) {
         console.error("Error fetching study time:", error);
